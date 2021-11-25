@@ -1,0 +1,44 @@
+{% extends "dash/base2.html" %}
+{% load crispy_forms_tags %}
+{% block content %}
+<div style="margin-left:24px; margin-right:89px; margin-top:114px;">
+    <div class="card" style="border-radius: 25px;">
+        <div class="card-body">
+            <!--         <form method="post" enctype="multipart/form-data">-->
+            <form method="post" novalidate>
+                {% csrf_token %}
+                <div class="row">
+                    <div class="col-4">
+                        {{ form.last_name|as_crispy_field }}
+                    </div>
+                    <div class="col-4">
+                        {{ form.first_name|as_crispy_field }}
+                    </div>
+                    <div class="col-4">
+                        {{ form.middle_name|as_crispy_field }}
+                    </div>
+                    <div class="col-3">
+                        {{ form.gender|as_crispy_field }}
+                    </div>
+                    <div class="col-2">
+                        {{ form.age|as_crispy_field }}
+                    </div>
+                    <div class="col-7">
+                        {{ form.vaccine_type|as_crispy_field }}
+                    </div>
+                </div>
+                <hr>
+                <button type="submit" class="btn btn-success btn-lg btn-sm"> Save Vaccination</button>
+                <a type="button" href="{% url 'sv-home' %}" class="btn btn-outline-dark btn-lg btn-sm ">
+                    Cancel<span class="las la-arrow-right">
+                            </span></a>
+            </form>
+        </div>
+    </div>
+</div>
+<script>
+function goBack() {
+  window.history.back();
+}
+</script>
+{% endblock content %}

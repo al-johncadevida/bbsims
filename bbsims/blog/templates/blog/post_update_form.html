@@ -1,0 +1,44 @@
+{% extends "blog/base.html" %}
+{% load crispy_forms_tags %}
+<!DOCTYPE html>
+<html lang="en">
+
+  {% block content %}
+  <body>
+
+
+    <!-- content starts -->
+    <div class="content">
+      <div class="content_left"><br>
+
+      </div>
+
+      <div class="content_center">
+
+<div class="card" style="border-radius: 25px;margin-top:10px">
+     <div class="card-body">
+        <form method="post" novalidate>
+            {% csrf_token %}
+                {{ form.title|as_crispy_field }}
+                {{ form.content|as_crispy_field }}
+            <hr>
+            <button type="submit" class="btn btn-outline-success btn-lg btn-sm btn-block" style="border-radius: 25px;">Save Post</button>
+        </form>
+    </div>
+</div>
+      </div>
+
+      <div class="content_right">
+        <div class="content_right_inner">
+          <div class="card-body" style="background-color: #f1f5f9;">
+
+								  <h5 class="card-text" style="text-align: center;">Options</h5><hr>
+                                  <a style="width:150px" type="button" href="{% url 'post-detail' object.id %}" class="btn btn-secondary btn-block text-left">Close</a>
+								</div>
+							  </div>
+        </div>
+      </div>
+    </div>
+  </body>
+{% endblock content %}
+</html>

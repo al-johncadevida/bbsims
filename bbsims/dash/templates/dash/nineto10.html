@@ -1,0 +1,73 @@
+{% extends "dash/base2.html" %}
+{% block content %}
+<main>
+    <div style="margin-left:54px; margin-right:105px; margin-top:50px;">
+        <h1 style="text-align: center; color: black;">9 - 10 Years Old</h1><hr>
+        <!--Tabla-->
+        <div class="card" style="border-radius: 25px;background-color:#f2f2f2">
+            <div class="card-header" style="border-radius: 25px 25px 0px 0px;background-image: linear-gradient(to bottom right, #48a7d1, #1a4e66);">
+
+                <div class="search-wrapper">
+                    <span class="bi bi-search"></span>
+                    <input type="text" id="myInput" onkeyup="myFunction()"  placeholder="Search Last name" />
+                </div>
+                <a type="button" href="{% url 'people-create' %}" class="btn btn-info btn-lg btn-sm">
+                    <span class="bi bi-plus"></span> Add Resident</a>
+            </div>
+
+            <div class="card-body">
+                <div class="table-responsive" style="height: 300px;">
+                    <table id="myTable" width="100%" >
+
+                        <thead>
+                        <tr>
+                            <td>Last Name</td>
+                            <td>First Name</td>
+                            <td>Middle Name</td>
+                            <td>Contact</td>
+                            <td>Status</td>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        {% for nineto10 in nineto10 %}
+                        <tr>
+                            <td><a href="{% url 'people-detail' nineto10.id %}">{{ nineto10.last_name }}</a></td>
+                            <td>{{ nineto10.first_name }}</td>
+                            <td>{{ nineto10.middle_name }}
+                                <!--                                                <span class="status green"></span> Bueno-->
+                            </td>
+                            <td>{{ nineto10.phone_number }}</td>
+                            <td>{{ nineto10.status }}</td>
+                        </tr>
+                        {% endfor %}
+                        </tbody>
+
+                    </table>
+                </div>
+            </div>
+
+        </div>
+
+        <script>
+function myFunction() {
+  var input, filter, table, tr, td, i, txtValue;
+  input = document.getElementById("myInput");
+  filter = input.value.toUpperCase();
+  table = document.getElementById("myTable");
+  tr = table.getElementsByTagName("tr");
+  for (i = 0; i < tr.length; i++) {
+    td = tr[i].getElementsByTagName("td")[0];
+    if (td) {
+      txtValue = td.textContent || td.innerText;
+      if (txtValue.toUpperCase().indexOf(filter) > -1) {
+        tr[i].style.display = "";
+      } else {
+        tr[i].style.display = "none";
+      }
+    }
+  }
+}
+</script>
+    </div>
+</main>
+{% endblock content %}

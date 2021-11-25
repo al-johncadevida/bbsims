@@ -1,0 +1,64 @@
+
+{% extends "blog/base.html" %}
+{% load crispy_forms_tags %}
+  {% block content %}
+  <body>
+
+
+    <!-- content starts -->
+    <div class="content">
+      <div class="content_left"><br>
+
+
+      </div>
+
+      <div class="content_center">
+          <div class="container bootstrap snippets bootdey" style="margin-top:10px;">
+    <div class="fb-profile">
+        <img align="left" class="rounded-circle" width="300" src="{{ user.profile.image.url }}" />
+        <div class="fb-profile-text">
+            <h1>{{ user.last_name }}, {{ user.first_name }} {{ user.middle_name }}</h1>
+            <p>{{ user.email }}<br>Username: {{ user.username }}</p>
+        </div>
+    <div class="card" style="border-style:none;border-radius: 25px;width:100%;background-color: #f1f5f9;"><br>
+								<div class="container" style="text-align: justify;text-justify: inter-word;">
+                                    <div class="card" style="border-style:none;border-radius: 25px;width:100%;background-color: #f1f5f9;"><br>
+								<div class="container" style="text-align: justify;text-justify: inter-word;">
+                                      <form method="POST" enctype="multipart/form-data">
+                                          {% csrf_token %}
+                                          <fieldset class="form-group">
+                                              <legend class="border-bottom mb-4">Profile Info</legend>
+                                              {{ u_form|crispy }}
+                                              {{ p_form|crispy }}
+                                          </fieldset>
+                                          <div class="form-group">
+                                              <button style="border-radius:25px;margin-bottom:20px" class="btn btn-outline-primary btn-sm btn-block" type="submit">Update</button>
+                                          </div>
+                                      </form>
+
+								    </div>
+        </div>
+								 </div>
+        </div>
+    </div>
+
+</div>
+
+      </div>
+
+      <div class="content_right">
+        <div class="content_right_inner">
+            <div class="card" style="border-style:none;border-radius: 25px;width:300px;background-color: #f1f5f9; position:fixed;"><br>
+								<div class="card-body" style="background-color: #f1f5f9;">
+
+								  <h5 class="card-text" style="text-align: center;">Options</h5><hr>
+                                  <a style="width:150px;" href="{% url 'profile' %}" class="btn btn-secondary btn-block btn-sm" type="submit">Cancel</a>
+                                </div>
+							  </div>
+
+        </div>
+      </div>
+    </div>
+  </body>
+{% endblock content %}
+</html>

@@ -1,0 +1,49 @@
+{% extends "dash/base2.html" %}
+
+{% block content %}
+<link rel="stylesheet" href="/static/dash/style2.css">
+<div style="margin-left:54px; margin-right:49px; margin-top:114px;">
+    <div class="recent-grid">
+        <div class="projects">
+            <div class="card" style="border-radius: 25px;">
+                <div class="card-header" style="border-radius: 25px;">
+                    <h3>{{ svaccination.first_name }}'s Vaccination</h3>
+
+                    <a type="button" href="{% url 'sv-update' object.id %}" class="btn btn-info btn-lg btn-sm">
+                        Update<span class="las la-arrow-right">
+                            </span></a>
+                </div>
+
+                <div class="card-body">
+                    <div class="table-responsive">
+                        <table width="100%">
+                            <div class="container">
+                                <h5><b>Last Name: </b> {{ svaccination.last_name }}</h5>
+                                <h5><b>First Name: </b> {{ svaccination.first_name }}</h5>
+                                <h5><b>Middle Name: </b> {{ svaccination.middle_name }}</h5>
+                                <h5><b>Gender: </b> {{ svaccination.gender }}</h5>
+                                <h5><b>Age: </b> {{ svaccination.age }}</h5>
+                                <hr>
+                                <h5><b>Vaccine Type: </b> {{ vaccination.vaccine_type }}</h5>
+                            </div>
+                            <br>
+                        </table><hr>
+                        <a type="button" href="{% url 'sv-home' %}" class="btn btn-outline-danger btn-lg btn-sm btn-block">
+                            Close<span class="las la-arrow-right">
+                            </span></a><br>
+                        <a type="button" href="{% url 'sv-delete' object.id %}" class="btn btn-danger btn-lg btn-sm">
+                            Delete<span class="las la-arrow-right">
+                            </span></a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+
+    </div>
+</div>
+{% endblock content %}
+<!--<button type="button" class="btn btn-info btn-lg btn-block btn-sm">
+                                    <a href="{% url 'bc-view' object.id %}" style="color:inherit">Barangay Clearance</a>
+                                  </button>-->

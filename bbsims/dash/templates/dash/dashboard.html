@@ -1,0 +1,269 @@
+{% extends "dash/base2.html" %}
+{% block content %}
+<link rel="stylesheet" href="/static/dash/dashboard.css">
+
+<div style="margin-left:20px; margin-right:20px; magin-top:0px;">
+    <div class="cards">
+
+        <div class="card-single" style="border-radius: 30px;">
+            <div>
+                <h1>{{rcount}}</h1>
+                <span>Population</span>
+            </div>
+            <div>
+                <span class="fas fa-users"></span>
+            </div>
+        </div>
+
+        <div class="card-single" style="border-radius: 30px;">
+            <div>
+                <h1>{{rmcount}}</h1>
+                <span>Male</span>
+            </div>
+            <div>
+                <span class="fas fa-male"></span>
+            </div>
+        </div>
+
+        <div class="card-single" style="border-radius: 30px;">
+            <div>
+                <h1>{{rfcount}}</h1>
+                <span>Female</span>
+            </div>
+            <div>
+                <span class="fas fa-female"></span>
+            </div>
+        </div>
+        <a href="{% url 'pwd' %}" style="text-decoration: none;" >
+            <div class="card-single" style="border-radius: 30px;">
+                <div>
+                    <h1>{{rpwdcount}}</h1>
+                    <span>PWD</span>
+                </div>
+                <div>
+                    <h1><span class="fas fa-wheelchair"></span></h1>
+                </div>
+            </div></a>
+    </div>
+
+    <!--Tabla-->
+    <div class="recent-grid">
+        <div class="projects">
+            <div class="card" style="height:450px;">
+                <div class="card-header">
+                    <h3>COVID-19 Cases</h3>
+
+                    <a type="button" href="{% url 'cc-create' %}" class="btn btn-info btn-lg btn-sm">
+                        <span class="bi bi-plus"></span> Add Case</a>
+                </div>
+                <div class="card-body">
+                    <div class="search-wrapper" style="height:38px;">
+                        <span class="bi bi-search"></span>
+                        <input type="text" id="myInput1" onkeyup="myFunction1()"  placeholder="Search Name" />
+                    </div>
+                    <div class="table-responsive" style="height: 300px;">
+                        <table id="myTable1" width="100%">
+
+                            <thead>
+                            <tr>
+                                <td>Name</td>
+                                <td>Status</td>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            {% for covidcases in covidcases %}
+                            <tr>
+                                <td><a href="{% url 'cc-detail' covidcases.id %}">{{ covidcases.name }}</a></td>
+                                <td>{{ covidcases.status }}</td>
+                            </tr>
+                            {% endfor %}
+                            </tbody>
+
+                        </table>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="customers">
+            <div class="card"><br>
+                <h4 style="text-align:center">Incomplete COVID-19 Vaccines</h4>
+                <div class="card-body">
+                    <div class="search-wrapper" style="height:38px;">
+                        <span class="bi bi-search"></span>
+                        <input type="text" id="myInput2" onkeyup="myFunction2()"  placeholder="Search Name" />
+                    </div>
+                    <div class="table-responsive" style="height: 280px;">
+                        <table id="myTable2" width="100%">
+
+                            <thead>
+                            <tr>
+                                <td>Name</td>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            {% for cvi in cvi %}
+                            <tr>
+                                <td><a href="{% url 'cv-detail' cvi.id %}">{{ cvi.name }}</a></td>
+                            </tr>
+                            {% endfor %}
+                            </tbody>
+
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="cards">
+
+            <div class="card-single" style="border-radius: 30px;">
+                <div>
+                    <h1>{{bcount}}</h1>
+                    <span>Blotter</span>
+                </div>
+                <div>
+                    <span class="bi bi-file-earmark-fill"></span>
+                </div>
+            </div>
+
+            <div class="card-single" style="border-radius: 30px;">
+                <div>
+                    <h1>{{bpcount}}</h1>
+                    <span>Brgy. Permits</span>
+                </div>
+                <div>
+                    <span class="fas fa-file-signature"></span>
+                </div>
+            </div>
+
+            <div class="card-single" style="border-radius: 30px;">
+                <div>
+                    <h1>{{btcount}}</h1>
+                    <span>Active Transaction</span>
+                </div>
+                <div>
+                    <span class="fas fa-file-invoice-dollar"></span>
+                </div>
+            </div>
+
+            <div class="card-single" style="border-radius: 30px;">
+                <div>
+                    <h1>{{arcount}}</h1>
+                    <span>Active Resolution</span>
+                </div>
+                <div>
+                    <span class="fas fa-file"></span>
+                </div>
+            </div>
+
+            <div class="card-single" style="border-radius: 30px;">
+                <div>
+                    <h1>{{cvccount}}</h1>
+                    <span>COVID Vaccine Complete</span>
+                </div>
+                <div>
+                    <span class="fas fa-syringe"></span>
+                </div>
+            </div>
+
+            <div class="card-single" style="border-radius: 30px;">
+                <div>
+                    <h1>{{cvicount}}</h1>
+                    <span>COVID Vaccine Incomplete</span>
+                </div>
+                <div>
+                    <span class="fas fa-syringe"></span>
+                </div>
+            </div>
+
+            <div class="card-single" style="border-radius: 30px;">
+                <div>
+                    <h1>{{ccacount}}</h1>
+                    <span>Active COVID Cases</span>
+                </div>
+                <div>
+                    <span class="fas fa-file-medical"></span>
+                </div>
+            </div>
+
+            <div class="card-single" style="border-radius: 30px;">
+                <div>
+                    <h1>{{pregnant}}</h1>
+                    <span>Pregnant</span>
+                </div>
+                <div>
+                    <span class="fas fa-hand-holding-heart"></span>
+                </div>
+            </div>
+
+
+            <a href="{% url 'hh-home' %}" style="text-decoration: none;" >
+                <div class="card-single" style="border-radius: 30px;">
+                    <div>
+                        <h1>{{hcount}}</h1>
+                        <span>Household</span>
+                    </div>
+                    <div>
+                        <h1><span class="fas fa-home"></span></h1>
+                    </div>
+                </div></a>
+
+            <a href="{% url 'org-home' %}" style="text-decoration: none;" >
+                <div class="card-single" style="border-radius: 30px;">
+                    <div>
+                        <h1><span class="fas fa-sitemap"></span></h1>
+                        <span>Organization</span>
+                    </div>
+                    <div>
+
+                    </div>
+                </div></a>
+
+        </div>
+        <script>
+function myFunction1() {
+  var input, filter, table, tr, td, i, txtValue;
+  input = document.getElementById("myInput1");
+  filter = input.value.toUpperCase();
+  table = document.getElementById("myTable1");
+  tr = table.getElementsByTagName("tr");
+  for (i = 0; i < tr.length; i++) {
+    td = tr[i].getElementsByTagName("td")[0];
+    if (td) {
+      txtValue = td.textContent || td.innerText;
+      if (txtValue.toUpperCase().indexOf(filter) > -1) {
+        tr[i].style.display = "";
+      } else {
+        tr[i].style.display = "none";
+      }
+    }
+  }
+}
+
+
+function myFunction2() {
+  var input, filter, table, tr, td, i, txtValue;
+  input = document.getElementById("myInput2");
+  filter = input.value.toUpperCase();
+  table = document.getElementById("myTable2");
+  tr = table.getElementsByTagName("tr");
+  for (i = 0; i < tr.length; i++) {
+    td = tr[i].getElementsByTagName("td")[0];
+    if (td) {
+      txtValue = td.textContent || td.innerText;
+      if (txtValue.toUpperCase().indexOf(filter) > -1) {
+        tr[i].style.display = "";
+      } else {
+        tr[i].style.display = "none";
+      }
+    }
+  }
+}
+
+</script>
+    </div>
+</div>
+{% endblock content %}

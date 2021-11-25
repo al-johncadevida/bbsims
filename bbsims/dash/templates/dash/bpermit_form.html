@@ -1,0 +1,72 @@
+{% extends "dash/base2.html" %}
+{% load crispy_forms_tags %}
+{% block content %}
+<div style="margin-left:24px; margin-right:89px; margin-top:114px;">
+    <div class="card" style="border-radius: 25px;">
+        <div class="card-body">
+            <form method="post" novalidate>
+                {% csrf_token %}
+                <h2 style="text-align:center">Personal Data</h2><hr>
+                <div class="row">
+                    <div class="col-6">
+                        {{ form.business_name|as_crispy_field }}
+                    </div>
+                    <div class="col-6">
+                        {{ form.location|as_crispy_field }}
+                    </div>
+                    <div class="col-4">
+                        {{ form.operator_lastname|as_crispy_field }}
+                    </div>
+                    <div class="col-4">
+                        {{ form.operator_firstname|as_crispy_field }}
+                    </div>
+                    <div class="col-4">
+                        {{ form.operator_middlename|as_crispy_field }}
+                    </div>
+                    <div class="col-9">
+                        {{ form.address|as_crispy_field }}
+                    </div>
+                    <div class="col-3">
+                        {{ form.date_issued|as_crispy_field }}
+                    </div>
+                    <div class="col-3">
+                        {{ form.status|as_crispy_field }}
+                    </div>
+                </div><hr>
+                <h2 style="text-align:center">Other Details</h2><hr>
+                <div class="row">
+                    <div class="col-4">
+                        {{ form.closure_date|as_crispy_field }}
+                    </div>
+                    <div class="col-8">
+                        {{ form.closure_reason|as_crispy_field }}
+                    </div>
+                    <div class="col-7">
+                        {{ form.contact_person|as_crispy_field }}
+                    </div>
+                    <div class="col-5">
+                        {{ form.contact_number|as_crispy_field }}
+                    </div>
+                    <div class="col-4">
+                        {{ form.classification|as_crispy_field }}
+                    </div>
+                    <div class="col-8">
+                        {{ form.remarks|as_crispy_field }}
+                    </div>
+                    <div class="col-6">
+                        {{ form.type_of_ownership|as_crispy_field }}
+                    </div>
+                    <div class="col-6">
+                        {{ form.approved_by|as_crispy_field }}
+                    </div>
+                </div>
+                <hr>
+                <button type="submit" class="btn btn-success btn-lg btn-sm">Save Permit</button>
+                <a type="button" href="{% url 'bp-home' %}" class="btn btn-outline-dark btn-lg btn-sm ">
+                    Cancel<span class="las la-arrow-right">
+                            </span></a>
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock content %}

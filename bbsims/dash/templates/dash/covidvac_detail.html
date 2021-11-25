@@ -1,0 +1,59 @@
+{% extends "dash/base2.html" %}
+{% block content %}
+<!--<link rel="stylesheet" href="/static/blog/main.css">-->
+<style>
+small{
+color:red
+}
+</style>
+<div style="margin-left:54px; margin-right:155px; margin-top:114px;">
+    <div class="projects">
+        <div class="card" style="border-radius: 25px;">
+            <div class="card-header" style="border-radius: 25px;">
+                <a type="button" href="{% url 'cv-update' object.id %}" class="btn btn-info btn-lg btn-sm">
+                    Update<span class="las la-arrow-right">
+                            </span></a><a type="button" href="{% url 'cv-delete' object.id %}" class="btn btn-danger btn-lg btn-sm">
+                Delete<span class="las la-arrow-right">
+                            </span></a>
+            </div>
+
+            <div class="card-body">
+                <h2 style="text-align:center">Personal Details</h2><hr>
+                <div class="row">
+                    <div class="col-12">
+                        <small>Name:</small> {{ covidvac.name}}
+                    </div><hr>
+                    <div class="col-12">
+                        <small >Gender:</small> {{ covidvac.gender }}
+                    </div><hr>
+                    <div class="col-12">
+                        <small >Age:</small> {{ covidvac.age }}
+                    </div><hr>
+                    <div class="col-12">
+                        <small >Birthday:</small> {{ covidvac.birthday }}
+                    </div>
+                </div><hr><h2 style="text-align:center">Vaccination Details</h2><hr>
+                <div class="row">
+                    <div class="col-12">
+                        <small>Vaccine Type:</small> {{ covidvac.vaccine_type }}
+                    </div><hr>
+                    <div class="col-8">
+                        <small >Status:</small> {{ covidvac.status }}
+                    </div><hr>
+                    <div class="col-12">
+                        <small >With COVID-19 History:</small> {{ covidvac.with_covid19_history}}
+                    </div><hr>
+                </div><hr>
+                <div style="float:left">
+                    <a type="button" style="width:100px;margin-left:20px;" href="{% url 'cv-home' %}" class="btn btn-outline-danger btn-sm">
+                        Close<span class="las la-arrow-right">
+                            </span></a></div>
+                <div style="float:right">
+                </div>
+            </div>
+        </div><br>
+
+    </div>
+</div>
+</div>
+{% endblock content %}

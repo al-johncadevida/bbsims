@@ -1,0 +1,31 @@
+{% extends "blog/base.html" %}
+{% load crispy_forms_tags %}
+{% block content %}
+
+
+<form method="post" novalidate>
+    {% csrf_token %}
+<!--    <div class="row">-->
+<!--      <div class="col-6">-->
+<!--        {{ form.body|as_crispy_field }}-->
+<!--      </div>-->
+<!--    </div>-->
+    {{ form.body|as_crispy_field }}
+    <button type="submit" class="btn btn-success">Continue</button>
+  </form>
+
+{% endblock content %}
+<h2>Comments</h2>-->
+
+<!--              {% if not post.comments.all %}-->
+<!--                No comments yat..<a href="{% url 'add_comment' post.pk %}">-->
+<!--              Add one.</a>-->
+<!--              {% else %}-->
+<!--                {% for comment in post.comments.all %}-->
+<!--              <strong>-->
+<!--                    {{ comment.name }} - -->
+<!--                    {{ comment.date_added }}-->
+<!--              </strong><br>-->
+<!--                    {{ comment.body }}-->
+<!--                {% endfor %}-->
+<!--              {% endif %}

@@ -1,0 +1,65 @@
+{% extends "dash/base2.html" %}
+{% block content %}
+<!--<link rel="stylesheet" href="/static/blog/main.css">-->
+<style>
+small{
+color:red
+}
+</style>
+<div style="margin-left:54px; margin-right:155px; margin-top:114px;">
+    <div class="projects">
+        <div class="card" style="border-radius: 25px;">
+            <div class="card-header" style="border-radius: 25px;">
+                <a type="button" href="{% url 'bpt-update' object.id %}" class="btn btn-info btn-lg btn-sm">
+                    Update<span class="las la-arrow-right">
+                            </span></a><a type="button" href="{% url 'bpt-delete' object.id %}" class="btn btn-danger btn-lg btn-sm">
+                Delete<span class="las la-arrow-right">
+                            </span></a>
+            </div>
+
+            <div class="card-body">
+                <h2 style="text-align:center">Transaction Details</h2><hr>
+                <div class="row">
+                    <div class="col-12">
+                        <small>Date:</small> {{ bptransaction.date}}
+                    </div><hr>
+                    <div class="col-12">
+                        <small>Business Name:</small> {{ bptransaction.business_name}}
+                    </div><hr>
+                    <div class="col-12">
+                        <small>Transaction Title:</small> {{ bptransaction.transaction_title }}
+                    </div><hr>
+                    <div class="col-12">
+                        <small >Contact Person:</small> {{ bptransaction.contact_person }}
+                    </div><hr>
+                    <div class="col-12">
+                        <small>Mode of Payment:</small> {{ bptransaction.mode_of_payment }}
+                    </div><hr>
+                    <div class="col-6">
+                        <small >Transaction Amount:</small> {{ bptransaction.transaction_amount }}
+                    </div>
+                    <div class="col-6">
+                        <small >Actual Amount:</small> {{ bptransaction.actual_amount }}
+                    </div><hr>
+                    <div class="col-12">
+                        <small >Payment Status:</small> {{ bptransaction.payment_status }}
+                    </div><hr>
+                    <div class="col-12">
+                        <small >Remarks:</small> {{ bptransaction.remarks }}
+                    </div><hr>
+
+                </div><hr>
+                <div style="float:left">
+                    <a type="button" style="width:100px;margin-left:20px;" href="{% url 'bpt-home' %}" class="btn btn-outline-danger btn-sm">
+                        Close<span class="las la-arrow-right">
+                            </span></a></div>
+                <div style="float:right">
+
+                </div>
+            </div>
+        </div><br>
+
+    </div>
+</div>
+</div>
+{% endblock content %}

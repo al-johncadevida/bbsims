@@ -1,0 +1,59 @@
+{% extends "dash/base2.html" %}
+{% block content %}
+<!--<link rel="stylesheet" href="/static/blog/main.css">-->
+<style>
+small{
+color:red
+}
+</style>
+<div style="margin-left:54px; margin-right:255px; margin-top:114px;">
+
+    <div class="projects">
+        <div class="card" style="border-radius: 25px;">
+            <div class="card-header" style="border-radius: 25px;">
+                <a type="button" href="{% url 'rs-update' object.id %}" class="btn btn-info btn-lg btn-sm">
+                    Update<span class="las la-arrow-right">
+                            </span></a><a type="button" href="{% url 'rs-delete' object.id %}" class="btn btn-danger btn-lg btn-sm">
+                Delete<span class="las la-arrow-right">
+                            </span></a>
+            </div>
+
+            <div class="card-body">
+                <h2 style="text-align:center">Resolution Details</h2><hr>
+                <div class="row">
+                    <div class="col-12">
+                        <small>Session Date:</small> {{ resolution.session_date}}
+                    </div><hr>
+                    <div class="col-12">
+                        <small>Resolution Number:</small> {{ resolution.resolution_number }}
+                    </div><hr>
+                    <div class="col-6">
+                        <small>Author:</small> {{ resolution.resolution_author }}
+                    </div><hr>
+                    <div class="col-12">
+                        <small>Co-Author:</small> {{ resolution.resolution_co_author }}
+                    </div><hr>
+                    <div class="col-12">
+                        <small>Forwarded To:</small> {{ resolution.forwarded_to }}
+                    </div><hr>
+                    <div class="col-12">
+                        <small>Resolution Summary:</small> {{ resolution.resolution_details_summary }}
+                    </div><hr>
+                    <div class="col-12">
+                        <small >Notes:</small> {{ resolution.notes }}
+                    </div><hr>
+                    <div class="col-4">
+                        <small>Status:</small> {{ resolution.status }}
+                    </div><hr>
+                </div>
+                <hr>
+                <a type="button" href="{% url 'rs-home' %}" class="btn btn-outline-danger btn-lg btn-sm btn-block">
+                    Close<span class="las la-arrow-right">
+                            </span></a><br>
+            </div>
+        </div>
+
+    </div>
+</div>
+</div>
+{% endblock content %}

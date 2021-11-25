@@ -1,0 +1,187 @@
+{% extends "dash/base2.html" %}
+{% block content %}
+<link rel="stylesheet" href="/static/dash/dashboard.css">
+
+<div style="margin-left:20px; margin-right:20px; magin-top:0px;">
+    <div class="cards">
+
+        <div class="card-single" style="border-radius: 30px;">
+            <div>
+                <h1>{{rcount}}</h1>
+                <span>Population</span>
+            </div>
+            <div>
+                <span class="fas fa-users"></span>
+            </div>
+        </div>
+
+        <div class="card-single" style="border-radius: 30px;">
+            <div>
+                <h1>{{rmcount}}</h1>
+                <span>Male</span>
+            </div>
+            <div>
+                <span class="fas fa-male"></span>
+            </div>
+        </div>
+
+        <div class="card-single" style="border-radius: 30px;">
+            <div>
+                <h1>{{rfcount}}</h1>
+                <span>Female</span>
+            </div>
+            <div>
+                <span class="fas fa-female"></span>
+            </div>
+        </div>
+        <a href="{% url 'pwd' %}" style="text-decoration: none;" >
+            <div class="card-single" style="border-radius: 30px;">
+                <div>
+                    <h1>{{rpwdcount}}</h1>
+                    <span>PWD</span>
+                </div>
+                <div>
+                    <h1><span class="fas fa-wheelchair"></span></h1>
+                </div>
+            </div></a>
+    </div>
+
+
+        <div class="cards">
+
+
+            <a href="{% url 'zeroto11' %}" style="text-decoration: none;" >
+                <div class="card-single" style="border-radius: 30px;">
+                    <div>
+                        <h1>{{zeroto11}}</h1>
+                        <span>0 - 11 Months</span>
+                    </div>
+                    <div>
+                        <h1><span class="fas fa-child"></span></h1>
+                    </div>
+                </div></a>
+
+            <a href="{% url 'oneto2' %}" style="text-decoration: none;" >
+                <div class="card-single" style="border-radius: 30px;">
+                    <div>
+                        <h1>{{oneto2}}</h1>
+                        <span>1 - 2 Years Old</span>
+                    </div>
+                    <div>
+                        <h1><span class="fas fa-child"></span></h1>
+                    </div>
+                </div></a>
+
+            <a href="{% url 'threeto4' %}" style="text-decoration: none;" >
+                <div class="card-single" style="border-radius: 30px;">
+                    <div>
+                        <h1>{{threeto4}}</h1>
+                        <span>3 - 4 Years Old</span>
+                    </div>
+                    <div>
+                        <h1><span class="fas fa-child"></span></h1>
+                    </div>
+                </div></a>
+
+            <a href="{% url 'fiveto6' %}" style="text-decoration: none;" >
+                <div class="card-single" style="border-radius: 30px;">
+                    <div>
+                        <h1>{{fiveto6}}</h1>
+                        <span>5 - 6 Years Old</span>
+                    </div>
+                    <div>
+                        <h1><span class="fas fa-child"></span></h1>
+                    </div>
+                </div></a>
+
+            <a href="{% url 'sevento8' %}" style="text-decoration: none;" >
+                <div class="card-single" style="border-radius: 30px;">
+                    <div>
+                        <h1>{{sevento8}}</h1>
+                        <span>7 - 8 Years Old</span>
+                    </div>
+                    <div>
+                        <h1><span class="fas fa-child"></span></h1>
+                    </div>
+                </div></a>
+
+            <a href="{% url 'nineto10' %}" style="text-decoration: none;" >
+                <div class="card-single" style="border-radius: 30px;">
+                    <div>
+                        <h1>{{nineto10}}</h1>
+                        <span>9 - 10 Years Old</span>
+                    </div>
+                    <div>
+                        <h1><span class="fas fa-child"></span></h1>
+                    </div>
+                </div></a>
+
+            <a href="{% url 'elevento12' %}" style="text-decoration: none;" >
+                <div class="card-single" style="border-radius: 30px;">
+                    <div>
+                        <h1>{{elevento12}}</h1>
+                        <span>11 - 12 Years Old</span>
+                    </div>
+                    <div>
+                        <h1><span class="fas fa-child"></span></h1>
+                    </div>
+                </div></a>
+
+            <a href="{% url 'thirteento14' %}" style="text-decoration: none;" >
+                <div class="card-single" style="border-radius: 30px;">
+                    <div>
+                        <h1>{{thirteento14}}</h1>
+                        <span>13 - 14 Years Old</span>
+                    </div>
+                    <div>
+                        <h1><span class="fas fa-child"></span></h1>
+                    </div>
+                </div></a>
+
+            <a href="{% url 'fifteento17' %}" style="text-decoration: none;" >
+                <div class="card-single" style="border-radius: 30px;">
+                    <div>
+                        <h1>{{fifteento17}}</h1>
+                        <span>15 - 17 Years Old</span>
+                    </div>
+                    <div>
+                        <h1><span class="fas fa-child"></span></h1>
+                    </div>
+                </div></a>
+
+            <a href="{% url 'adultmale' %}" style="text-decoration: none;" >
+                <div class="card-single" style="border-radius: 30px;">
+                    <div>
+                        <h1>{{adultmale}}</h1>
+                        <span>Adult Male</span>
+                    </div>
+                    <div>
+                        <h1><span class="fas fa-male"></span></h1>
+                    </div>
+                </div></a>
+
+            <a href="{% url 'adultfemale' %}" style="text-decoration: none;" >
+                <div class="card-single" style="border-radius: 30px;">
+                    <div>
+                        <h1>{{adultfemale}}</h1>
+                        <span>Adult Female</span>
+                    </div>
+                    <div>
+                        <h1><span class="fas fa-female"></span></h1>
+                    </div>
+                </div></a>
+
+            <a href="{% url 'senior' %}" style="text-decoration: none;" >
+                <div class="card-single" style="border-radius: 30px;">
+                    <div>
+                        <h1>{{ra65count}}</h1>
+                        <span>Senior</span>
+                    </div>
+                    <div>
+                        <h1><span class="fas fa-blind"></span></h1>
+                    </div>
+                </div></a>
+
+        </div>
+    </div>
+{% endblock content %}

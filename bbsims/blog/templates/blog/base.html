@@ -1,0 +1,122 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+
+    <link rel="stylesheet" href="/static/blog/style.css">
+    <link rel="stylesheet" href="/static/dash/style2.css">
+    {% if title %}
+    <title>BBSIMS - {{ title }}</title>
+    {% else %}
+    <title>BBSIMS</title>
+    {% endif %}
+</head>
+<!--<head>-->
+
+<!--    &lt;!&ndash; Required meta tags &ndash;&gt;-->
+<!--    <meta charset="utf-8">-->
+<!--    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">-->
+<!--    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">-->
+
+<!--    <link rel="stylesheet" type="text/css" href="{% static 'blog/main.css' %}">-->
+
+<!--    {% if title %}-->
+<!--        <title>Django Blog - {{ title }}</title>-->
+<!--    {% else %}-->
+<!--        <title>Django Blog</title>-->
+<!--    {% endif %}-->
+<!--</head>-->
+<body>
+<!--    <header class="site-header">-->
+<!--      <nav class="navbar navbar-expand-md navbar-dark bg-steel fixed-top">-->
+<!--        <div class="container">-->
+<!--&lt;!&ndash;          <a class="navbar-brand mr-4" href="{% url 'blog-home' %}">Django Blog</a>&ndash;&gt;-->
+<!--          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggle" aria-controls="navbarToggle" aria-expanded="false" aria-label="Toggle navigation">-->
+<!--          <span class="navbar-toggler-icon"></span>-->
+<!--          </button>-->
+<!--          <div class="collapse navbar-collapse" id="navbarToggle">-->
+<!--            {% if user.is_authenticated%}-->
+<!--              <div class="navbar-nav mr-auto">-->
+<!--            <a class="nav-item nav-link" href="{% url 'logout' %}">Logout</a>-->
+<!--&lt;!&ndash;&ndash;&gt;<a class="nav-item nav-link" href="{% url 'news-feed3' %}">home</a>-->
+<!--            <a class="nav-item nav-link" href="{% url 'news-feed2' %}">Newsfeed</a>-->
+<!--&lt;!&ndash;            <a class="nav-item nav-link" href="{% url 'post-create' %}">New Post</a>&ndash;&gt;-->
+<!--            <a class="nav-item nav-link" href="{% url 'profile' %}">Profile</a>-->
+<!--            <a class="nav-item nav-link" href="{% url 'u_profile' %}">Update-Profile</a>-->
+<!--            {% else %}-->
+
+<!--            <div class="navbar-nav mr-auto">-->
+<!--              <a class="nav-item nav-link" href="{% url 'blog-about' %}">About</a>-->
+<!--            </div>-->
+<!--            &lt;!&ndash; Navbar Right Side &ndash;&gt;-->
+<!--            <div class="navbar-nav">-->
+<!--              <a class="nav-item nav-link" href="{% url 'login_1' %}">Login</a>-->
+<!--              <a class="nav-item nav-link" href="{% url 'register' %}">Register</a>-->
+<!--            </div>-->
+<!--              </div>-->
+<!--            {% endif %}-->
+
+<!--          </div></div>-->
+<!--      </nav>-->
+<!--    </header>-->
+<!--    <main role="main" class="container">-->
+<!--      <div class="row">-->
+<!--        <div class="col-md-8">-->
+<!--            {% for post in posts %}-->
+<!--&lt;!&ndash;        <article class="media content-section">&ndash;&gt;-->
+<!--&lt;!&ndash;          <div class="media-body">&ndash;&gt;-->
+<!--&lt;!&ndash;            <div class="article-metadata">&ndash;&gt;-->
+<!--&lt;!&ndash;                <h4>{{ post.special_announcement }}</h4>&ndash;&gt;-->
+<!--&lt;!&ndash;              <small class="text-muted">{{ post.date_posted|date:"F d, Y" }}</small>&ndash;&gt;-->
+<!--&lt;!&ndash;            </div>&ndash;&gt;-->
+<!--&lt;!&ndash;          </div>&ndash;&gt;-->
+<!--&lt;!&ndash;        </article>&ndash;&gt;-->
+<!--            {% endfor %}-->
+<div class="navbar">
+    <div class="navbar_left">
+        <!--         <img class="navbar_logo" src="\media\logo1.png" alt="logo">-->
+
+
+
+        <img src="\media\logo1.png" height="30px" />
+
+
+    </div>
+    {% if user.is_authenticated%}
+
+    <a class="nav-item nav-link" href="{% url 'news-feed3' %}" style="color:#2f8fba;"><span class="bi bi-house"></span> home</a>
+
+    {% else %}
+
+    <div class="navbar-nav mr-auto">
+        <a class="nav-item nav-link" href="{% url 'blog-about' %}">About</a>
+    </div>
+    <!-- Navbar Right Side -->
+    <div class="navbar-nav">
+        <a class="nav-item nav-link" href="{% url 'login_1' %}">Login</a>
+        <a class="nav-item nav-link" href="{% url 'register' %}">Register</a>
+    </div>
+
+    {% endif %}
+    <div class="navbar_right">
+    </div>
+</div>
+{% block content %}{% endblock %}
+<!--        </div>-->
+
+<!--      </div>-->
+<!--    </main>-->
+
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+</html>

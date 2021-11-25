@@ -1,0 +1,31 @@
+{% extends "dash/base2.html" %}
+{% block content %}
+<link rel="stylesheet" href="/static/dash/dashboard.css">
+<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+<div style="margin-left:54px; margin-right:20px; magin-top:0px;">
+    <div class="cards">
+
+        <a href="{% url 'transactions' %}" style="text-decoration: none;" >
+            <div class="card-single" style="border-radius: 30px;">
+                <div>
+                    <h1><span class="fas fa-folder-open"></span></h1>
+                    <span>Transactions</span>
+                </div>
+                <div>
+
+                </div>
+            </div></a>
+        <a href="{% url 'health-services' %}" style="text-decoration: none;" >
+            <div class="card-single" style="border-radius: 30px;">
+                <div>
+                    <h1><span class="fas fa-heartbeat"></span></h1>
+                    <span>Health Services</span>
+                </div>
+                <div>
+
+                </div>
+            </div></a>
+    </div>
+</div>
+
+{% endblock content %}

@@ -1,0 +1,43 @@
+{% extends "dash/base2.html" %}
+{% load crispy_forms_tags %}
+{% block content %}
+<div style="margin-left:24px; margin-right:89px; margin-top:114px; margin-bottom: 20px;">
+    <div class="card" style="border-radius: 25px;">
+        <div class="card-body">
+            <form method="post" novalidate>
+                {% csrf_token %}
+                <div class="row">
+                    <div class="col-6">
+                        {{ form.business_name|as_crispy_field }}
+                    </div>
+                    <div class="col-6">
+                        {{ form.location|as_crispy_field }}
+                    </div>
+                    <div class="col-4">
+                        {{ form.operator_lastname|as_crispy_field }}
+                    </div>
+                    <div class="col-4">
+                        {{ form.operator_firstname|as_crispy_field }}
+                    </div>
+                    <div class="col-4">
+                        {{ form.operator_middlename|as_crispy_field }}
+                    </div>
+                    <div class="col-9">
+                        {{ form.address|as_crispy_field }}
+                    </div>
+                    <div class="col-3">
+                        {{ form.status|as_crispy_field }}
+                    </div>
+                </div><hr>
+                <button type="submit" class="btn btn-success btn-lg btn-sm">Save Blotter</button>
+                <button class="btn btn-outline-dark btn-lg btn-sm" onclick="goBack()">Cancel</button>
+            </form>
+        </div>
+    </div>
+</div>
+<script>
+    function goBack() {
+      window.history.back();
+    }
+    </script>
+{% endblock content %}

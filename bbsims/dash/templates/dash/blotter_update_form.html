@@ -1,0 +1,114 @@
+{% extends "dash/base2.html" %}
+{% load crispy_forms_tags %}
+{% block content %}
+<div style="margin-left:24px; margin-right:89px; margin-top:114px; margin-bottom: 20px;">
+<div class="card" style="border-radius: 25px;">
+     <div class="card-body">
+       <form method="post" novalidate>
+         {% csrf_token %}
+         <h2 style="text-align:center">Victim Data</h2><hr>
+         <div class="row" style="text-transform:uppercase">
+           <div class="col-4">
+             {{ form.victim_lastname|as_crispy_field }}
+           </div>
+           <div class="col-4">
+             {{ form.victim_firstname|as_crispy_field }}
+           </div>
+           <div class="col-4">
+             {{ form.victim_middle_name|as_crispy_field }}
+           </div>
+           <div class="col-3">
+             {{ form.gender|as_crispy_field }}
+           </div>
+           <div class="col-3">
+             {{ form.age|as_crispy_field }}
+           </div>
+           <div class="col-3">
+             {{ form.birthday|as_crispy_field }}
+           </div>
+           <div class="col-3">
+             {{ form.civil_status|as_crispy_field }}
+           </div>
+           <div class="col-4">
+             {{ form.religion|as_crispy_field }}
+           </div>
+           <div class="col-4">
+             {{ form.nationality|as_crispy_field }}
+           </div>
+           <div class="col-4">
+             {{ form.phone_number|as_crispy_field }}
+           </div>
+           <div class="col-6">
+             {{ form.birthplace|as_crispy_field }}
+           </div>
+           <div class="col-6">
+             {{ form.address|as_crispy_field }}
+           </div>
+         </div><hr><h2 style="text-align:center;">Suspect Data</h2><hr>
+         <div class="row" style="text-transform:uppercase">
+           <div class="col-4">
+             {{ form.suspect_lastname|as_crispy_field }}
+           </div>
+           <div class="col-4">
+             {{ form.suspect_firstname|as_crispy_field }}
+           </div>
+           <div class="col-4">
+             {{ form.suspect_middle_name|as_crispy_field }}
+           </div>
+           <div class="col-3">
+             {{ form.suspect_gender|as_crispy_field }}
+           </div>
+           <div class="col-3">
+             {{ form.suspect_age|as_crispy_field }}
+           </div>
+           <div class="col-3">
+             {{ form.suspect_birthday|as_crispy_field }}
+           </div>
+           <div class="col-3">
+             {{ form.suspect_civil_status|as_crispy_field }}
+           </div>
+           <div class="col-4">
+             {{ form.suspect_religion|as_crispy_field }}
+           </div>
+           <div class="col-4">
+             {{ form.suspect_nationality|as_crispy_field }}
+           </div>
+           <div class="col-4">
+             {{ form.suspect_phone_number|as_crispy_field }}
+           </div>
+           <div class="col-6">
+             {{ form.suspect_birthplace|as_crispy_field }}
+           </div>
+           <div class="col-6">
+             {{ form.suspect_address|as_crispy_field }}
+           </div>
+           <div class="col-3">
+             {{ form.suspect_height|as_crispy_field }}
+           </div>
+           <div class="col-3">
+             {{ form.suspect_weight|as_crispy_field }}
+           </div>
+         </div>
+         <div class="col-12" style="text-transform:uppercase">
+           {{ form.suspect_description|as_crispy_field }}
+         </div>
+         <div class="col-12" style="text-transform:uppercase">
+           {{ form.narrative_report|as_crispy_field }}
+         </div>
+         <div class="col-3" style="text-transform:uppercase">
+           {{ form.status|as_crispy_field }}
+         </div>
+         <button type="submit" class="btn btn-success btn-lg btn-sm">Save Blotter</button>
+         <a type="button" href="{% url 'b-home' %}" class="btn btn-outline-dark btn-lg btn-sm ">
+           Cancel<span class="las la-arrow-right">
+                            </span></a>
+       </form>
+    </div>
+</div>
+</div>
+<script>
+function goBack() {
+  window.history.back();
+}
+</script>
+{% endblock content %}

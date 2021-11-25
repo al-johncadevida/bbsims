@@ -1,0 +1,125 @@
+{% extends "dash/base2.html" %}
+{% block content %}
+<!--<link rel="stylesheet" href="/static/blog/main.css">-->
+<div style="margin-left:54px; margin-right:255px; margin-top:114px;">
+
+    <div class="projects">
+                    <div class="card" style="border-radius: 25px;">
+                        <div class="card-header" style="border-radius: 25px;">
+                            <a type="button" href="{% url 'b-update' object.id %}" class="btn btn-info btn-lg btn-sm">
+                              Update<span class="las la-arrow-right">
+                            </span></a><a type="button" href="{% url 'b-delete' object.id %}" class="btn btn-danger btn-lg btn-sm">
+                              Delete<span class="las la-arrow-right">
+                            </span></a>
+                        </div>
+
+                        <div class="card-body">
+                            <h2 style="text-align:center">Victim Data</h2><hr>
+                            <div class="row">
+                                <div class="col-4">
+                                    <small style="color:grey">Last Name:</small> {{ blotter.victim_lastname}}
+                                </div>
+                                <div class="col-4">
+                                    <small style="color:grey">First Name:</small> {{ blotter.victim_firstname }}
+                                </div>
+                                <div class="col-4">
+                                    <small style="color:grey">Middle Name:</small> {{ blotter.victim_middlename }}
+                                </div>
+                                <div class="col-4">
+                                    <small style="color:grey">Gender:</small> {{ blotter.gender }}
+                                </div>
+                                <div class="col-4">
+                                    <small style="color:grey">Age:</small> {{ blotter.age }}
+                                </div>
+                                <div class="col-4">
+                                    <small style="color:grey">Birthday:</small> {{ blotter.birthday }}
+                                </div>
+                                <div class="col-4">
+                                    <small style="color:grey">Civil Status:</small> {{ blotter.civil_status }}
+                                </div>
+                                <div class="col-4">
+                                    <small style="color:grey">Religion:</small> {{ blotter.religion }}
+                                </div>
+                                <div class="col-4">
+                                    <small style="color:grey">Nationality:</small> {{ blotter.nationality }}
+                                </div>
+                                <div class="col-4">
+                                    <small style="color:grey">Contact:</small> {{ blotter.phone_number }}
+                                </div>
+                                <div class="col-6">
+                                    <small style="color:grey">Birthplace:</small> {{ blotter.birthplace }}
+                                </div>
+                                <div class="col-6">
+                                    <small style="color:grey">Address:</small> {{ blotter.address }}
+                                </div>
+                            </div><hr><h2 style="text-align:center;">Suspect Data</h2><hr>
+                            <div class="row">
+                                <div class="col-4">
+                                    <small style="color:grey">Last Name:</small> {{ blotter.suspect_lastname }}
+                                </div>
+                                <div class="col-4">
+                                    <small style="color:grey">First Name:</small> {{ blotter.suspect_firstname }}
+                                </div>
+                                <div class="col-4">
+                                    <small style="color:grey">Middle Name:</small> {{ blotter.suspect_middlename }}
+                                </div>
+                                <div class="col-4">
+                                    <small style="color:grey">Gender:</small> {{ blotter.suspect_gender }}
+                                </div>
+                                <div class="col-4">
+                                    <small style="color:grey">Age:</small> {{ blotter.suspect_age }}
+                                </div>
+                                <div class="col-4">
+                                    <small style="color:grey">Birthday:</small> {{ blotter.suspect_birthday }}
+                                </div>
+                                <div class="col-4">
+                                    <small style="color:grey">Civil Status:</small> {{ blotter.suspect_civil_status }}
+                                </div>
+                                <div class="col-4">
+                                    <small style="color:grey">Religion:</small> {{ blotter.suspect_religion }}
+                                </div>
+                                <div class="col-4">
+                                    <small style="color:grey">Nationality:</small> {{ blotter.suspect_nationality }}
+                                </div>
+                                <div class="col-4">
+                                    <small style="color:grey">Contact:</small> {{ blotter.suspect_phone_number }}
+                                </div>
+                                <div class="col-6">
+                                    <small style="color:grey">Birthplace:</small> {{ blotter.suspect_birthplace }}
+                                </div>
+                                <div class="col-4">
+                                    <small style="color:grey">Height:</small> {{ blotter.suspect_height }}
+                                </div>
+                                <div class="col-4">
+                                    <small style="color:grey">Weight:</small> {{ blotter.suspect_weight }}
+                                </div>
+                                <div class="col-6">
+                                    <small style="color:grey">Address:</small> {{ blotter.suspect_address }}
+                                </div>
+                                <div class="col-12">
+                                    <small style="color:grey">Description:</small> {{ blotter.suspect_description }}
+                                </div>
+                                <div class="col-3">
+                                    <small style="color:grey">Status:</small> {{ blotter.status }}
+                                </div>
+                            </div><hr><h2 style="text-align:center;">Narrative Report</h2><hr>
+                            <div class="row">
+                                <div class="col-12">
+                                    {{ blotter.narrative_report }}
+                                </div>
+                            </div>
+
+                            <hr>
+                              <a type="button" href="{% url 'b-home' %}" class="btn btn-outline-danger btn-lg btn-sm btn-block">
+                              Close<span class="las la-arrow-right">
+                            </span></a><br>
+                              <a type="button" href="{% url 'blotter-view' object.id %}" class="btn btn-outline-primary btn-lg btn-sm btn-block">
+                              Download PDF Document<span class="las la-arrow-right">
+                            </span></a>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+</div>
+{% endblock content %}

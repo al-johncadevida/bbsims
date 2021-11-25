@@ -1,0 +1,151 @@
+{% extends "blog/base.html" %}
+<!DOCTYPE html>
+<html lang="en">
+
+  {% block content %}
+  <body>
+
+    <!-- content starts -->
+    <div class="content">
+      <div class="content_left"><br>
+      </div>
+      <div class="content_center">
+                <div class="card gedf-card" style="display:flex;margin-top:10px;border-style: none;margin-left:40px;margin-right:30px;border-radius: 25px;;">
+                    <div class="card-header" style="background: #fff;border-radius: 25px 25px 0px 0px;text-align: left;">
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="mr-2">
+                                    <img class="rounded-circle" width="45" src="{{ post.author.profile.image.url }}" alt="">
+                                </div>
+                                <div class="ml-2">
+                                    <div class="h5 m-0">{{ post.author }}</div>
+                                    <div class="h7 text-muted">{{ post.author.email }}</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div class="text-muted h7 mb-2"> <i class="fa fa-clock-o"></i>{{ post.date_posted|date:"F d, Y" }}</div>
+                            <h5 class="card-title">{{ object.title }}</h5>
+                        <p class="card-text">
+                            {{ object.content }}
+                        </p>
+                    </div>
+
+                        <form class="card-footer" action="{% url 'like_post' post.pk %}" method="POST" style="background: #fff;border-radius: 0px 0px 25px 25px ;">
+                            {% csrf_token %}
+
+                              {% if user.is_authenticated%}
+                                  {% if liked %}
+                            <div class="text-center">
+                                    <button style="border-radius:25px;" type="submit" name="post_id" value="{{ post.id }}" class="btn btn-outline-danger btn-sm btn-block">
+                                        Unlike</button>
+                            </div>
+<!--                                    <a value="{{ post.id }}" class="card-link" type="submit" name="post_id"><i class="fa fa-gittip"></i> Unlike</a>-->
+                                  {% else %}
+                                    <button style="border-radius:25px;" type="submit" name="post_id" value="{{ post.id }}" class="btn btn-outline-primary btn-sm btn-block">
+                                        Like</button>
+                                  {% endif %}
+                              {% else %}
+                              <small><a href="{% url 'login_resident' %}">Login</a> to like!</small>
+                              {% endif %}{{ total_likes }} <i class="far fa-thumbs-up"></i>
+
+                        </form>
+      </div>
+                </div>
+      <div class="content_right">
+        <div class="content_right_inner">
+            <div class="card" style="border-style:none;border-radius: 25px;width:300px;background-color: #f1f5f9; position:fixed;"><br>
+								<div class="card-body" style="background-color: #f1f5f9;">
+
+								  <h5 class="card-text" style="text-align: center;">Options</h5><hr>
+                                {% if object.author == user %}
+                                  <a style="width:150px" type="button" href="{% url 'post-update' object.id %}" class="btn btn-secondary btn-block text-left">Update Post</a><br>
+                                  <a style="width:150px" type="button" href="{% url 'post-delete' object.id %}" class="btn btn-secondary btn-block text-left">Delete</a>
+                                {% endif %}
+                                  <a style="width:150px" type="button" href="{% url 'news-feed3' %}" class="btn btn-secondary btn-block text-left">Close</a>
+								</div>
+							  </div>
+
+        </div>
+        </div>
+      </div>
+    </div>
+  </body>
+{% endblock content %}
+</html>
+
+
+
+<!--  <div class="content">-->
+<!--      <div class="content_left">-->
+
+<!--      </div>-->
+
+<!--      <div class="content_center">-->
+
+<!--        <div class="media_container">-->
+<!--          <div class="share">-->
+<!--            <h4 class="text_mid">Post Details</h4><br><hr /><br>-->
+<!--            <div class="share_upSide">-->
+<!--              <div class="news_feed_title">-->
+<!--              <img src="{{ post.author.profile.image.url }}" height="100px">-->
+<!--              <div class="news_feed_title_content">-->
+<!--                <p><a  class="text_med" href="#">{{ post.author }}</a></p>-->
+<!--                <small class="text_light">{{ post.date_posted|date:"g:iA. F d, Y" }} <i class="fas fa-globe-americas"></i></small>-->
+<!--              </div>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--              <hr />-->
+<!--              <div class="news_feed_description">-->
+<!--              <p class="news_feed_subtitle">-->
+<!--                <div  class ="text_med">-->
+<!--                  <h4 >{{ object.title }}</h4><br>-->
+<!--                   {{ object.content }}-->
+<!--                </div></p>-->
+<!--              </div>-->
+<!--              <div class="divider"><hr /></div>-->
+<!--              <div class="share_downSide">-->
+<!--                {% if object.author == user %}-->
+<!--                    <div class="likes_buttons_links">-->
+<!--                    <a href="{% url 'post-update' object.id %}">-->
+<!--                    <i class="far fa-edit"><span> Update</span></i>-->
+<!--                    </a>-->
+<!--                    </div>-->
+<!--                    <div class="likes_buttons_links">-->
+<!--                    <a href="{% url 'post-delete' object.id %}">-->
+<!--                    <i class="fas fa-eraser"><span> Delete</span></i>-->
+<!--                    </a>-->
+<!--                    </div>-->
+<!--                {% endif %}-->
+<!--                <div class="likes_buttons_links">-->
+<!--                <a href="{% url 'news-feed2' %}">-->
+<!--                <i class="fa fa-check"><span> Close</span></i>-->
+<!--                </a>-->
+<!--                </div>-->
+<!--                </div>-->
+
+<!--              <form action="{% url 'like_post' post.pk %}" method="POST">-->
+<!--                {% csrf_token %}-->
+<!--                  {% if user.is_authenticated%}-->
+<!--                      {% if liked %}-->
+<!--                        <button type="submit", name="post_id", value="{{ post.id }}", class="btn btn-danger btn-sm">Unlike</button>-->
+<!--                      {% else %}-->
+<!--                        <button type="submit", name="post_id", value="{{ post.id }}", class="btn btn-primary btn-sm">Like</button>-->
+<!--                      {% endif %}-->
+<!--                  {% else %}-->
+<!--                  <small><a href="{% url 'login_resident' %}">Login</a> to like!</small>-->
+<!--                  {% endif %}-->
+<!--                  - {{ total_likes }} Like-->
+<!--            </form>-->
+<!--            </div>-->
+
+
+<!--          </div>-->
+<!--        </div>-->
+<!--          <div class="content_right">-->
+
+<!--            </div>-->
+<!--  </div>-->
+
+

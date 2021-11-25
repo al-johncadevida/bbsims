@@ -1,0 +1,21 @@
+{% extends "dash/base2.html" %}
+{% block content %}
+<div style="margin-left:54px; margin-right:255px; margin-top:114px;">
+    <div class="card" style="border-radius: 25px;">
+        <div class="card-header" style="border-radius: 25px;">
+            <h2 style="color:red;">Confirm Delete</h2>
+            <a class="btn btn-outline-dark" href="{% url 'apost-detail' object.id %}">Cancel</a>
+            </div>
+        <div class="card-body">
+    <div class="content-section">
+        <form method="POST">
+            {% csrf_token %}
+                <h4>You are about to delete </h4><br><h3><b>{{ object.content }}</b></h3>
+            <hr>
+                <button class="btn btn-outline-danger" type="submit">Confirm</button>
+
+        </form>
+    </div></div></div>
+    </div>
+</div>
+{% endblock content %}

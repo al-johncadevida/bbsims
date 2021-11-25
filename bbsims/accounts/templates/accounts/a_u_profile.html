@@ -1,0 +1,24 @@
+{% extends "dash/base2.html" %}
+{% load crispy_forms_tags %}
+{% block content %}
+    <div class="card" style="border-style:none;border-radius: 25px;width:70%;background-color: #f1f5f9;margin-top:10px;"><br>
+								<div class="container" style="text-align: justify;text-justify: inter-word;">
+                                    <div class="card" style="border-style:none;border-radius: 25px;width:100%;background-color: #f1f5f9;"><br>
+								<div class="container" style="text-align: justify;text-justify: inter-word;">
+                                      <form method="POST" enctype="multipart/form-data">
+                                          {% csrf_token %}
+                                          <fieldset class="form-group">
+                                              <legend class="border-bottom mb-4">Update Profile</legend>
+                                              {{ u_form|crispy }}
+                                              {{ p_form|crispy }}
+                                          </fieldset>
+                                          <div class="form-group">
+                                              <button style="border-radius:25px;margin-bottom:20px" class="btn btn-outline-primary btn-sm btn-block" type="submit">Update</button>
+                                          </div>
+                                      </form>
+
+								    </div>
+        </div>
+								 </div>
+        </div>
+{% endblock content %}

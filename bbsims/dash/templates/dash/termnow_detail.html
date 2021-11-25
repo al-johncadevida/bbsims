@@ -1,0 +1,25 @@
+{% extends "dash/base2.html" %}
+
+{% block content %}
+
+<div style="margin-left:54px; margin-right:49px; margin-top:114px;backdrop-filter: blur(5px);">
+    <div class="card" style="border-radius: 25px;width: 20rem;">
+  <div class="card-header" style="border-radius: 25px;">
+    <h5>Manage Term {{ termnow.term_year }}</h5>
+  </div><div class="card-body">
+        <br>
+
+    <a type="button" href="{% url 'tn-update' object.id %}" class="btn btn-outline-primary btn-lg btn-sm btn-block">
+                              Update<span class="las la-arrow-right">
+                            </span></a>
+   <a type="button" href="{% url 'org-home' %}" class="btn btn-outline-danger btn-lg btn-sm btn-block">
+                              Close<span class="las la-arrow-right">
+                            </span></a>
+    </div>
+</div>
+                </div>
+
+{% endblock content %}
+<!--<button type="button" class="btn btn-info btn-lg btn-block btn-sm">
+                                    <a href="{% url 'bc-view' object.id %}" style="color:inherit">Barangay Clearance</a>
+                                  </button>-->

@@ -1,0 +1,28 @@
+{% extends "dash/base2.html" %}
+{% load crispy_forms_tags %}
+{% block content %}
+<div style="margin-left:24px; margin-right:89px; margin-top:114px;">
+    <div class="card" style="border-radius: 25px;">
+        <div class="card-body">
+            <form method="post" novalidate>
+                {% csrf_token %}
+                <div class="row">
+                    <div class="col-8">
+                        {{ form.family_name|as_crispy_field }}
+                    </div>
+                    <div class="col-4">
+                        {{ form.number_of_member|as_crispy_field }}
+                    </div>
+                    <div class="col-8">
+                        {{ form.members|as_crispy_field }}
+                    </div>
+                </div><hr>
+                <button type="submit" class="btn btn-success btn-lg btn-sm">Save</button>
+                <a type="button" href="{% url 'hh-detail' household.id %}" class="btn btn-outline-dark btn-lg btn-sm ">
+                    Cancel<span class="las la-arrow-right">
+                            </span></a>
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock content %}

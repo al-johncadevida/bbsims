@@ -1,0 +1,80 @@
+{% extends "dash/base2.html" %}
+{% block content %}
+<!--<link rel="stylesheet" href="/static/blog/main.css">-->
+<style>
+small{
+color:red
+}
+</style>
+<div style="margin-left:54px; margin-right:155px; margin-top:114px;">
+    <div class="projects">
+        <div class="card" style="border-radius: 25px;">
+            <div class="card-header" style="border-radius: 25px;">
+                <a type="button" href="{% url 'bp-update' object.id %}" class="btn btn-info btn-lg btn-sm">
+                    Update<span class="las la-arrow-right">
+                            </span></a><a type="button" href="{% url 'bp-delete' object.id %}" class="btn btn-danger btn-lg btn-sm">
+                Delete<span class="las la-arrow-right">
+                            </span></a>
+            </div>
+
+            <div class="card-body">
+                <h2 style="text-align:center">Personal Data</h2><hr>
+                <div class="row">
+                    <div class="col-12">
+                        <small>Business Name:</small> {{ bpermit.business_name}}
+                    </div><hr>
+                    <div class="col-12">
+                        <small>Name(Operator):</small> {{ bpermit.operator_lastname }},  {{ bpermit.operator_firstname }}  {{ bpermit.operator_middlename }}.
+                    </div><hr>
+                    <div class="col-12">
+                        <small >Address:</small> {{ bpermit.address }}
+                    </div><hr>
+                    <div class="col-8">
+                        <small >Status:</small> {{ bpermit.status }}
+                    </div><hr>
+                    <div class="col-4">
+                        <small >Date Issued:</small> {{ bpermit.date_issued }}
+                    </div>
+                </div><hr><h2 style="text-align:center">Other Details</h2><hr>
+                <div class="row">
+                    <div class="col-12">
+                        <small>Closure Date:</small> {{ bpermit.closure_date }}
+                    </div><hr>
+                    <div class="col-8">
+                        <small >Contact Person:</small> {{ bpermit.contact_person }}
+                    </div>
+                    <div class="col-4">
+                        <small >Contact Number:</small> {{ bpermit.contact_number }}
+                    </div><hr>
+                    <div class="col-12">
+                        <small >Classification:</small> {{ bpermit.classification }}
+                    </div><hr>
+                    <div class="col-12">
+                        <small >Type of Ownership:</small> {{ bpermit.type_of_ownership }}
+                    </div><hr>
+                    <div class="col-12">
+                        <small >Approved By:</small> {{ bpermit.approved_by }}
+                    </div>
+                    <div class="col-12">
+                        <small >Closure Reason:</small> {{ bpermit.closure_reason }}
+                    </div><hr><hr>
+                    <div class="col-12">
+                        <small>Remarks:</small> {{ bpermit.remarks }}
+                    </div><hr>
+                </div><hr>
+                <div style="float:left">
+                    <a type="button" style="width:100px;margin-left:20px;" href="{% url 'bp-home' %}" class="btn btn-outline-danger btn-sm">
+                        Close<span class="las la-arrow-right">
+                            </span></a></div>
+                <div style="float:right">
+                    <a type="button" style="width:200px;margin-right:20px;" href="{% url 'bpermit-view' object.id %}" class="btn btn-outline-primary btn-lg btn-sm btn-block">
+                        Download PDF Document<span class="las la-arrow-right">
+                            </span></a>
+                </div>
+            </div>
+        </div><br>
+
+    </div>
+</div>
+</div>
+{% endblock content %}

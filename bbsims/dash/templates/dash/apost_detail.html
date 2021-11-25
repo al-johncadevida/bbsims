@@ -1,0 +1,103 @@
+{% extends "dash/base2.html" %}
+{% block content %}
+
+<!--  <div class="content">-->
+<!--      <div class="content_left">-->
+
+<!--      </div>-->
+
+<!--      <div class="content_center">-->
+
+<!--        <div class="media_container">-->
+<!--          <div class="share">-->
+<!--            <h4 class="text_mid">Announcement Details</h4><br><hr /><br>-->
+<!--            <div class="share_upSide">-->
+<!--              <div class="news_feed_title">-->
+<!--              <img src="{{ post.author.profile.image.url }}" height="100px">-->
+<!--              <div class="news_feed_title_content">-->
+<!--&lt;!&ndash;                <p><a  class="text_med" href="#">{{ apost.author }}</a></p>&ndash;&gt;-->
+<!--                  <h3>{{ apost.author }}</h3>-->
+<!--                <small class="text_light">{{ post.date_posted|date:"g:iA. F d, Y" }} <i class="fas fa-globe-americas"></i></small>-->
+<!--              </div>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--              <hr />-->
+<!--              <div class="news_feed_description">-->
+<!--              <p class="news_feed_subtitle">-->
+<!--                <div  class ="text_med">-->
+<!--                  <h4 >{{ object.content }}</h4><br>-->
+<!--                </div></p>-->
+<!--              </div>-->
+<!--              <div class="divider"><hr /></div>-->
+<!--              <div class="share_downSide">-->
+<!--                {% if object.author == user %}-->
+<!--                    <div class="likes_buttons_links">-->
+<!--                    <a href="{% url 'apost-update' object.id %}">-->
+<!--                    <i class="far fa-edit"><span> Update</span></i>-->
+<!--                    </a>-->
+<!--                    </div>-->
+<!--                    <div class="likes_buttons_links">-->
+<!--                    <a href="{% url 'apost-delete' object.id %}">-->
+<!--                    <i class="fas fa-eraser"><span> Delete</span></i>-->
+<!--                    </a>-->
+<!--                    </div>-->
+<!--                {% endif %}-->
+<!--                <div class="likes_buttons_links">-->
+<!--                <a href="{% url 'news-feed' %}">-->
+<!--                <i class="fa fa-check"><span> Close</span></i>-->
+<!--                </a>-->
+<!--                </div>-->
+<!--                </div>-->
+
+<!--            </div>-->
+
+
+<!--          </div>-->
+<!--        </div>-->
+<!--          <div class="content_right">-->
+
+<!--            </div>-->
+<!--  </div>-->
+<div style="margin-left:54px; margin-right:255px; margin-top:114px;">
+    <div class="projects">
+                    <div class="card" style="border-radius: 25px;">
+                        <div class="card-header" style="border-radius: 25px;">
+                            <a type="button" href="{% url 'apost-update' object.id %}" class="btn btn-info btn-lg btn-sm">
+                              Update<span class="las la-arrow-right">
+                            </span></a>
+                            {{ object.date_posted|date:"F d, Y" }}
+                            <a type="button" href="{% url 'apost-delete' object.id %}" class="btn btn-danger btn-lg btn-sm">
+                              Delete<span class="las la-arrow-right">
+                            </span></a>
+                        </div>
+
+                        <div class="card-body">
+                            <div class="table-responsive">
+                                <table width="100%">
+                                    <div class="text-muted h7 mb-2">
+                                        Announcement by: {{ object.author }}
+                                    </div>
+                                    <div style="display: flex; text-align:center;">
+                                    <div class="container"><br>
+                                        <h3>{{ object.content }}</h3>
+								    </div>
+                                    </div>
+								  <br>
+                                </table><hr>
+                              <a type="button" href="{% url 'news-feed' %}" class="btn btn-outline-danger btn-lg btn-sm btn-block">
+                              Close<span class="las la-arrow-right">
+                            </span></a>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+</div>
+{% endblock content %}
+
+<!--<button onclick="goBack()">Go Back</button>-->
+<!--<script>-->
+<!--function goBack() {-->
+<!--  window.history.back();-->
+<!--}-->
+<!--</script>-->

@@ -1,0 +1,54 @@
+{% extends "dash/base2.html" %}
+{% load crispy_forms_tags %}
+{% block content %}
+<div style="margin-left:24px; margin-right:89px; margin-top:114px;">
+    <div class="card" style="border-radius: 25px;">
+        <div class="card-body">
+            <form method="post" enctype="multipart/form-data">
+                <!--        <form method="post" novalidate>-->
+                {% csrf_token %}
+                <div class="row">
+                    <div class="col-3">
+                        {{ form.session_date|as_crispy_field }}
+                    </div>
+                    <div class="col-3">
+                        {{ form.resolution_number|as_crispy_field }}
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        {{ form.resolution_author|as_crispy_field }}
+                    </div>
+                    <div class="col-12">
+                        {{ form.resolution_co_author|as_crispy_field }}
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        {{ form.forwarded_to|as_crispy_field }}
+                    </div>
+                    <div class="col-12">
+                        {{ form.resolution_details_summary|as_crispy_field }}
+                    </div>
+                    <div class="col-12">
+                        {{ form.notes|as_crispy_field }}
+                    </div>
+                    <div class="col-3">
+                        {{ form.status|as_crispy_field }}
+                    </div>
+                </div>
+                <hr>
+                <button type="submit" class="btn btn-success btn-lg btn-sm">Save Resolution</button>
+                <a type="button" href="{% url 'rs-home' %}" class="btn btn-outline-dark btn-lg btn-sm ">
+                    Cancel<span class="las la-arrow-right">
+                            </span></a>
+            </form>
+        </div>
+    </div>
+</div>
+<script>
+function goBack() {
+  window.history.back();
+}
+</script>
+{% endblock content %}

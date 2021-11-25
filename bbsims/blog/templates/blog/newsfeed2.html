@@ -1,0 +1,216 @@
+{% extends "blog/base.html" %}
+
+{% block content %}
+<!--<link rel="stylesheet" href="/static/dash/style2.css">-->
+<link rel="stylesheet" href="/static/dash/style.css">
+
+   <div style="margin-left:54px; margin-right:155px; margin-top:0px;">
+       <div class="content">
+       <div class="content_left">
+
+       </div>
+   <div class="content_center">
+   <div class="media_container">
+       <div class="news_feed">
+  <div class="recent-grid">
+                <div class="projects">
+                    <h3 style="text-align:center; margin-top:20px;">Announcements</h3>
+                    {% for announcements in announcements %}
+                <div class="card gedf-card">
+                    <div class="card-header">
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="mr-2">
+                                    <img class="rounded-circle" width="45" src="{{ announcements.author.profile.image.url }}" alt="">
+                                </div>
+                                <div class="ml-2">
+                                    <div class="h5 m-0">{{ announcements.author }}</div>
+                                    <div class="h7 text-muted">{{ announcements.author.email }}</div>
+                                </div>
+                            </div>
+                            <div>
+<!--                                <div class="dropdown">-->
+<!--                                    <button class="btn btn-link dropdown-toggle" type="button" id="gedf-drop1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">-->
+<!--                                        <i class="fa fa-ellipsis-h"></i>-->
+<!--                                    </button>-->
+<!--                                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="gedf-drop1">-->
+<!--                                        <div class="h6 dropdown-header">Configuration</div>-->
+<!--                                        <a class="dropdown-item" href="#">Save</a>-->
+<!--                                        <a class="dropdown-item" href="#">Hide</a>-->
+<!--                                        <a class="dropdown-item" href="#">Report</a>-->
+<!--                                    </div>-->
+<!--                                </div>-->
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="card-body">
+                        <div class="text-muted h7 mb-2"> <i class="fa fa-clock-o"></i>{{ announcements.date_posted|date:"F d, Y" }}</div>
+                            <h5 class="card-title">{{ announcements.content }}</h5>
+                    </div>
+                    <div class="card-footer">
+                        <a href="#" class="card-link"><i class="fa fa-gittip"></i> Like</a>
+                        <a href="#" class="card-link"><i class="fa fa-comment"></i> Comment</a>
+                        <a href="#" class="card-link"><i class="fa fa-mail-forward"></i> Share</a>
+                    </div>
+                </div><br>
+    {% endfor %}<hr><h3 style="text-align:center;">Resident's Post</h3>
+                    {% for resident_post in resident_post %}
+                <div class="card gedf-card">
+                    <div class="card-header">
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="mr-2">
+                                    <img class="rounded-circle" width="45" src="{{ resident_post.author.profile.image.url }}" alt="">
+                                </div>
+                                <div class="ml-2">
+                                    <div class="h5 m-0">{{ resident_post.author }}</div>
+                                    <div class="h7 text-muted">{{ resident_post.author.email }}</div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+                    <div class="card-body">
+                        <div class="text-muted h7 mb-2"> <i class="fa fa-clock-o"></i>{{ resident_post.date_posted|date:"F d, Y" }}</div>
+                            <h5 class="card-title">{{ resident_post.title }}</h5>
+                        <p class="card-text">
+                            {{ resident_post.content }}
+                        </p>
+                    </div>
+                    <div class="card-footer">
+                        <a href="#" class="card-link"><i class="fa fa-gittip"></i> Like</a>
+                        <a href="#" class="card-link"><i class="fa fa-comment"></i> Comment</a>
+                        <a href="#" class="card-link"><i class="fa fa-mail-forward"></i> Share</a>
+                        <a class="card-link" href="{% url 'post-detail' resident_post.id %}">More</a>
+                    </div>
+                </div><br>
+    {% endfor %}
+                </div>
+
+                <div class="customers" style=" position:fixed; right: 40px;margin-top:0px;">
+							  <div class="card" style="width:320px"><br>
+                                  <h5 style="text-align: center;"><b>Create Post</b></h5>
+<!--								<a type="button" href="{% url 'apost-create' %}" class="btn btn-outline-dark btn-lg btn-sm">-->
+<!--                              Create<span class="las la-arrow-right">-->
+<!--                            </span></a>-->
+                                  <hr>
+								<div class="card-body">
+                                    <form name = "form" action = "{% url 'post-create'  %}"
+                                     method = "POST" >{% csrf_token %}
+
+                                          <div class="form-group">
+                                              <textarea type="text"  style="width:100%;border-radius: 10px;border: 0px; height:70px"
+                                                        placeholder = "Post title" name = "title" ></textarea>
+                                              <textarea  style="width:100%;border-radius: 10px;border: 0px; height:180px"
+                                                         placeholder = "content" name = "content" ></textarea>
+
+                                          </div><hr>
+
+                                          <button  class="btn btn-outline-success btn-lg btn-block btn-sm" type="submit" >Post</button>
+
+                                    </form>
+                                </div>
+							  </div>
+							  <br>
+            </div>
+  </div>
+       </div>
+   </div>
+   </div>
+       <div class="content_right">
+
+       </div>
+
+       </div>
+</div>
+
+{% endblock content %}
+
+
+<!--<!DOCTYPE html>-->
+<!--<html>-->
+<!--<head>-->
+
+<!--    &lt;!&ndash; Required meta tags &ndash;&gt;-->
+<!--    <meta charset="utf-8">-->
+<!--    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">-->
+
+<!--    &lt;!&ndash; Bootstrap CSS &ndash;&gt;-->
+<!--    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">-->
+
+<!--    <link rel="stylesheet" type="text/css" href="{% static 'blog/main.css' %}">-->
+
+<!--    {% if title %}-->
+<!--        <title>Django Blog - {{ title }}</title>-->
+<!--    {% else %}-->
+<!--        <title>Django Blog</title>-->
+<!--    {% endif %}-->
+<!--</head>-->
+<!--<body>-->
+
+<!--</body>-->
+<!--</html>-->
+
+
+<!--   <header class="site-header">-->
+<!--      <nav class="navbar navbar-expand-md navbar-dark bg-steel fixed-top">-->
+<!--        <div class="container">-->
+<!--&lt;!&ndash;          <a class="navbar-brand mr-4" href="{% url 'blog-home' %}">Django Blog</a>&ndash;&gt;-->
+<!--          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggle" aria-controls="navbarToggle" aria-expanded="false" aria-label="Toggle navigation">-->
+<!--          <span class="navbar-toggler-icon"></span>-->
+<!--          </button>-->
+<!--          <div class="collapse navbar-collapse" id="navbarToggle">-->
+<!--            <div class="navbar-nav mr-auto">-->
+<!--              <a class="nav-item nav-link" href="{% url 'blog-about' %}">About</a>-->
+<!--            </div>-->
+<!--            &lt;!&ndash; Navbar Right Side &ndash;&gt;-->
+<!--            <div class="navbar-nav">-->
+<!--              <a class="nav-item nav-link" href="{% url 'login_1' %}">Login</a>-->
+<!--              <a class="nav-item nav-link" href="{% url 'register' %}">Register</a>-->
+<!--            </div>-->
+<!--          </div>-->
+<!--        </div>-->
+<!--      </nav>-->
+<!--    </header>-->
+<!--    <main role="main" class="container">-->
+<!--      <div class="row">-->
+<!--        <div class="col-md-8">-->
+<!--                {% for apost in apost %}-->
+<!--                    <article class="media content-section">-->
+<!--                      <img class="rounded-circle article-img" src="{{ apost.author.profile.image.url }}">-->
+<!--                      <div class="media-body">-->
+<!--                        <div class="article-metadata">-->
+<!--                            <h3>{{ apost.author }}</h3>-->
+<!--                          <small class="text-muted">{{ apost.date_posted|date:"F d, Y" }}</small>-->
+<!--                        </div>-->
+<!--                        <h4><a class="article-title" href="{% url 'apost-detail' apost.id %}">{{ apost.content }}</a></h4>-->
+<!--                      </div>-->
+<!--                    </article>-->
+<!--                {% endfor %}-->
+<!--              {% for post in posts %}-->
+
+<!--                    <article class="media content-section">-->
+<!--                      <img class="rounded-circle article-img" src="{{ post.author.profile.image.url }}">-->
+<!--                      <div class="media-body">-->
+<!--                        <div class="article-metadata">-->
+<!--                            <h3>{{ post.author }}</h3>-->
+<!--                          <small class="text-muted">{{ post.date_posted|date:"F d, Y" }}</small>-->
+<!--                        </div>-->
+<!--                        <h4><a class="article-title" href="{% url 'post-detail' post.id %}">{{ post.title }}</a></h4>-->
+<!--                        <p class="article-content">{{ post.content }}</p>-->
+<!--                      </div>-->
+<!--                    </article>-->
+
+<!--              {% endfor %}-->
+<!--        </div>-->
+
+<!--      </div>-->
+<!--    </main>-->
+
+<!--    &lt;!&ndash; Optional JavaScript &ndash;&gt;-->
+<!--    &lt;!&ndash; jQuery first, then Popper.js, then Bootstrap JS &ndash;&gt;-->
+<!--    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>-->
+<!--    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>-->
+<!--    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>-->

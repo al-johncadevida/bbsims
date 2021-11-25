@@ -1,0 +1,203 @@
+{% extends "dash/base2.html" %}
+{% load crispy_forms_tags %}
+{% block content %}
+<div style="margin-left:24px; margin-right:89px; margin-top:114px; margin-bottom: 20px;">
+<div class="card" style="border-radius: 25px;">
+     <div class="card-body">
+        <form method="post" novalidate>
+            {% csrf_token %}
+            <div class="row">
+              <div class="col-4">
+                {{ form.Barangay_chairman|as_crispy_field }}
+              </div>
+                <div class="col-4">
+                {{ form.peace_and_order|as_crispy_field }}
+              </div>
+                <div class="col-4">
+                {{ form.environmental_protection_and_safety|as_crispy_field }}
+              </div>
+                <div class="col-4">
+                {{ form.health_and_sanitation|as_crispy_field }}
+              </div>
+                <div class="col-4">
+                {{ form.public_works_and_infrastructure|as_crispy_field }}
+              </div>
+                <div class="col-4">
+                {{ form.law_ordinances_education_and_family|as_crispy_field }}
+              </div>
+                <div class="col-4">
+                {{ form.transportation_and_communication|as_crispy_field }}
+              </div>
+                <div class="col-4">
+                {{ form.budget_and_appropriation|as_crispy_field }}
+              </div>
+                <div class="col-4">
+                {{ form.sk_chairman|as_crispy_field }}
+              </div>
+                <div class="col-4">
+                {{ form.sk_councilor1|as_crispy_field }}
+              </div>
+                <div class="col-4">
+                {{ form.sk_councilor2|as_crispy_field }}
+              </div>
+                <div class="col-4">
+                {{ form.sk_councilor3|as_crispy_field }}
+              </div>
+                <div class="col-4">
+                {{ form.sk_councilor4|as_crispy_field }}
+              </div>
+                <div class="col-4">
+                {{ form.barangay_secretary|as_crispy_field }}
+              </div>
+                <div class="col-4">
+                {{ form.barangay_treasurer|as_crispy_field }}
+              </div>
+                <div class="col-4">
+                {{ form.barangay_accounting_clerk|as_crispy_field }}
+              </div>
+                <div class="col-4">
+                {{ form.barangay_clerk|as_crispy_field }}
+              </div>
+                <div class="col-4">
+                {{ form.assistant_clerk|as_crispy_field }}
+              </div>
+                <div class="col-4">
+                {{ form.barangay_day_care_worker|as_crispy_field }}
+              </div>
+                <div class="col-4">
+                {{ form.barangay_agrarian|as_crispy_field }}
+              </div>
+                <div class="col-4">
+                {{ form.barangay_health_worker1|as_crispy_field }}
+              </div>
+                <div class="col-4">
+                {{ form.barangay_health_worker2|as_crispy_field }}
+              </div>
+                <div class="col-4">
+                {{ form.barangay_health_worker3|as_crispy_field }}
+              </div>
+                <div class="col-4">
+                {{ form.barangay_health_worker4|as_crispy_field }}
+              </div>
+                <div class="col-4">
+                {{ form.barangay_health_worker5|as_crispy_field }}
+              </div>
+                <div class="col-4">
+                {{ form.barangay_health_worker6|as_crispy_field }}
+              </div>
+                <div class="col-4">
+                {{ form.barangay_health_worker7|as_crispy_field }}
+              </div>
+                <div class="col-4">
+                {{ form.barangay_health_worker8|as_crispy_field }}
+              </div>
+                <div class="col-4">
+                {{ form.barangay_health_worker9|as_crispy_field }}
+              </div>
+                <div class="col-4">
+                {{ form.barangay_health_worker10|as_crispy_field }}
+              </div>
+                <div class="col-4">
+                {{ form.barangay_health_worker11|as_crispy_field }}
+              </div>
+                <div class="col-4">
+                {{ form.barangay_health_worker12|as_crispy_field }}
+              </div>
+                <div class="col-4">
+                {{ form.barangay_tanod1|as_crispy_field }}
+              </div>
+                <div class="col-4">
+                {{ form.barangay_tanod2|as_crispy_field }}
+              </div>
+                <div class="col-4">
+                {{ form.barangay_tanod3|as_crispy_field }}
+              </div>
+                <div class="col-4">
+                {{ form.barangay_tanod4|as_crispy_field }}
+              </div>
+                <div class="col-4">
+                {{ form.barangay_tanod5|as_crispy_field }}
+              </div>
+                <div class="col-4">
+                {{ form.barangay_tanod6|as_crispy_field }}
+              </div>
+                <div class="col-4">
+                {{ form.barangay_tanod7|as_crispy_field }}
+              </div>
+                <div class="col-4">
+                {{ form.barangay_tanod8|as_crispy_field }}
+              </div>
+                <div class="col-4">
+                {{ form.barangay_tanod9|as_crispy_field }}
+              </div>
+                <div class="col-4">
+                {{ form.barangay_tanod10|as_crispy_field }}
+              </div>
+                <div class="col-4">
+                {{ form.barangay_justice1|as_crispy_field }}
+              </div>
+                <div class="col-4">
+                {{ form.barangay_justice2|as_crispy_field }}
+              </div>
+                <div class="col-4">
+                {{ form.barangay_justice3|as_crispy_field }}
+              </div>
+                <div class="col-4">
+                {{ form.barangay_justice4|as_crispy_field }}
+              </div>
+                <div class="col-4">
+                {{ form.barangay_justice5|as_crispy_field }}
+              </div>
+                <div class="col-4">
+                {{ form.barangay_justice6|as_crispy_field }}
+              </div>
+                <div class="col-4">
+                {{ form.barangay_justice7|as_crispy_field }}
+              </div>
+                <div class="col-4">
+                {{ form.barangay_justice8|as_crispy_field }}
+              </div>
+                <div class="col-4">
+                {{ form.barangay_justice9|as_crispy_field }}
+              </div>
+                <div class="col-4">
+                {{ form.barangay_justice10|as_crispy_field }}
+              </div>
+                <div class="col-4">
+                {{ form.barangay_helper_and_driver1|as_crispy_field }}
+              </div>
+                <div class="col-4">
+                {{ form.barangay_helper_and_driver2|as_crispy_field }}
+              </div>
+                <div class="col-4">
+                {{ form.barangay_helper_and_driver3|as_crispy_field }}
+              </div>
+                <div class="col-4">
+                {{ form.barangay_helper_and_driver4|as_crispy_field }}
+              </div>
+                <div class="col-4">
+                {{ form.barangay_helper_and_driver5|as_crispy_field }}
+              </div>
+                <div class="col-4">
+                {{ form.barangay_helper_and_driver6|as_crispy_field }}
+              </div>
+                <div class="col-4">
+                {{ form.barangay_helper_and_driver7|as_crispy_field }}
+              </div>
+                <div class="col-4">
+                {{ form.term_year|as_crispy_field }}
+              </div>
+            </div><hr>
+            <button type="submit" class="btn btn-success btn-lg btn-sm">Save Term</button>
+            <button class="btn btn-outline-dark btn-lg btn-sm" onclick="goBack()">Cancel</button>
+        </form>
+    </div>
+</div>
+</div>
+<script>
+function goBack() {
+  window.history.back();
+}
+</script>
+{% endblock content %}
+

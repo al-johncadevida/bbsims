@@ -1,0 +1,13 @@
+{% extends "dash/base2.html" %}
+{% block content %}
+<div class="news_feed_description">
+                  <img class="rounded-circle article-img" src="{{ people.image.url }}">
+              <p class="news_feed_subtitle">
+                <div  class ="text_med">
+                  <h4 style="text-transform: capitalize;">{{ people.last_name }}, {{ people.first_name }} {{ people.middle_name }}
+                  <br>{{ people.gender }}<br>{{ people.age }}<br>{{ people.birthday }}
+                  <br>{{ people.house_number }}<br>{{ people.civil_status }}<br>{{ people.religion }}<br>{{ people.nationality }}
+                  <br>{{ people.street }}<br>{{ people.phone_number }}<hr />{{ people.status }}</h4>
+                </div></p>
+              </div>
+{% endblock content %}

@@ -1,0 +1,19 @@
+{% extends "dash/base2.html" %}
+{% block content %}
+    <h1 class="mb-3">Posts by {{ view.kwargs.username }}</h1>
+    {% for people in people %}
+        <article class="media content-section">
+          <img class="rounded-circle article-img" src="{{ people.author.profile.image.url }}">
+          <div class="media-body">
+            <div class="article-metadata">
+              <a class="mr-2" href="#">{{ people.author }}</a>
+              <small class="text-muted">{{ people.date_posted|date:"g:iA. F d, Y" }} <i class="fas fa-globe-americas"></i></small>
+              <a class="btn btn-primary btn-sm mt-1 mb-1" href="{% url 'home2' %}">Okay</a>
+            </div>
+            <h2><a class="article-title" href="{% url 'people-detail' post.id %}">{{ people.last_name }}</a></h2>
+            <p class="article-content">{{ people.first_name }}</p>
+          </div>
+        </article>
+    {% endfor %}
+
+{% endblock content %}

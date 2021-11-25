@@ -1,0 +1,92 @@
+{% extends "blog/base.html" %}
+<!--{% load crispy_forms_tags %}-->
+
+<!--    <div class="content-section">-->
+<!--      <div class="media">-->
+<!--        <img class="rounded-circle account-img" src="{{ user.profile.image.url }}">-->
+<!--        <div class="media-body">-->
+<!--          <h2 class="account-heading">{{ user.username }}</h2>-->
+<!--          <p class="text-secondary">{{ user.email }}</p>-->
+<!--        </div>-->
+<!--      </div>-->
+<!--      &lt;!&ndash; FORM HERE &ndash;&gt;-->
+<!--    </div>-->
+
+
+<!--<div class="container bootstrap snippets bootdey" style="margin-top:10px;">-->
+<!--    <div class="fb-profile">-->
+<!--        <img align="left" class="rounded-circle" width="300" src="{{ user.profile.image.url }}" />-->
+<!--        <div class="fb-profile-text">-->
+<!--            <h1>Deycknston Mackency</h1>-->
+<!--            <p>Rap music rules!</p>-->
+<!--        </div>-->
+<!--    </div>-->
+<!--</div>-->
+
+
+  {% block content %}
+  <body>
+
+
+    <!-- content starts -->
+    <div class="content">
+      <div class="content_left"><br>
+          <div class="card" style="border-style:none;border-radius: 25px;width:300px;background-color: #f1f5f9;"><br>
+								<div class="container" style="text-align: justify;text-justify: inter-word;">
+                                      <h5><b>Last Name: </b> {{ user.last_name }}</h5>
+                                      <h5><b>First Name: </b> {{ user.first_name }}</h5>
+                                      <h5><b>Middle Name: </b> {{ user.middle_name }}</h5>
+                                      <h5><b>Gender: </b> {{ user.gender }}</h5><hr>
+                                      <h5><b>Age: </b> {{ user.age }}</h5>
+                                      <h5><b>Birthday: </b> {{ user.birthday }}</h5>
+<!--                                      <h5><b>House Number: </b> {{ user.house_number }}</h5>-->
+<!--                                      <h5><b>Street: </b> {{ user.street }}</h5>-->
+                                      <h5><b>Civil Status: </b> {{ user.civil_status }}</h5>
+                                      <h5><b>Nationality: </b> {{ user.nationality }}</h5>
+                                      <h5><b>Religion: </b> {{ user.religion }}</h5>
+                                      <h5><b>Contact: </b> {{ user.phone_number }}</h5>
+
+								    </div>
+        </div>
+
+      </div>
+
+      <div class="content_center">
+          <div class="container bootstrap snippets bootdey" style="margin-top:10px;">
+    <div class="fb-profile">
+        <img align="left" class="rounded-circle" width="300" src="{{ user.profile.image.url }}" />
+        <div class="fb-profile-text">
+            <h1>{{ user.last_name }}, {{ user.first_name }} {{ user.middle_name }}</h1>
+            <p>{{ user.email }}<br>Username: {{ user.username }}</p>
+        </div>
+    <div class="card" style="border-style:none;border-radius: 25px;width:100%;background-color: #f1f5f9;"><br>
+								<div class="container" style="text-align: justify;text-justify: inter-word;">
+                                    <h3>Bio</h3>
+                                      <h7>{{ user.profile.bio }}</h7>
+
+								 </div>
+        </div>
+    </div>
+
+</div>
+
+      </div>
+
+      <div class="content_right">
+        <div class="content_right_inner">
+            <div class="card" style="border-style:none;border-radius: 25px;width:300px;background-color: #f1f5f9; position:fixed;"><br>
+								<div class="card-body" style="background-color: #f1f5f9;">
+
+								  <h5 class="card-text" style="text-align: center;">Options</h5><hr>
+                                  <a style="width:150px;" href="{% url 'news-feed3' %}" class="btn btn-secondary btn-block btn-sm text-left " type="submit">Close</a>
+                                  <a style="width:150px" type="button" href="{% url 'u_profile' %}" class="btn btn-secondary btn-block text-left btn-sm">Update Profile</a><br>
+                                  <a style="width:150px" type="button" href="{% url 'logout' %}" class="btn btn-secondary btn-block text-left btn-sm">Logout</a>
+								</div>
+							  </div>
+
+        </div>
+      </div>
+    </div>
+  </body>
+{% endblock content %}
+</html>

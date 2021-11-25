@@ -1,0 +1,50 @@
+{% extends "dash/base2.html" %}
+{% block content %}
+<link rel="stylesheet" href="/static/dash/dashboard.css">
+<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+<div style="margin-left:54px; margin-right:20px; magin-top:0px;">
+    <div class="cards">
+
+        <div class="card-single" style="border-radius: 30px;">
+            <div>
+                <h2><span class="fas fa-folder-plus"></span></h2>
+                <span>Transaction</span>
+            </div>
+            <div>
+
+            </div>
+        </div>
+
+        <div class="card-single" style="border-radius: 30px;">
+            <div>
+                <h2><span class="fas fa-folder-plus"></span></h2>
+                <span>Transaction</span>
+            </div>
+            <div>
+
+            </div>
+        </div>
+
+        <div class="card-single" style="border-radius: 30px;">
+            <div>
+                <h2><span class="fas fa-folder-plus"></span></h2>
+                <span>Transaction</span>
+            </div>
+            <div>
+
+            </div>
+        </div>
+        <a href="{% url 'bpt-home' %}" style="text-decoration: none;" >
+            <div class="card-single" style="border-radius: 30px;">
+                <div>
+                    <h2><span class="fas fa-briefcase"></span></h2>
+                    <span>Business Transactions</span>
+                </div>
+                <div>
+
+                </div>
+            </div></a>
+    </div>
+</div>
+
+{% endblock content %}

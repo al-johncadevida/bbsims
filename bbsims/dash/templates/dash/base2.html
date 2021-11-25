@@ -1,0 +1,101 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <title>Admin</title>
+    <link rel="stylesheet" href="/static/dash/style2.css">
+    <!--    <link rel="stylesheet" type="text/css" href="{% static 'blog/main.css' %}">-->
+</head>
+
+<body>
+<main>
+
+    <input type="checkbox" id="nav-toggle">
+    <div class="sidebar" style="background-image: linear-gradient(to bottom right, #48a7d1, #1a4e66);">
+        <!--        <div class="sidebar-brand">-->
+
+        <!--            <h4><span> <img src="\media\default.png" height="30px"></span> <span>Barangay Bolo</span></h4>-->
+
+        <!--        </div>-->
+        <!--Secciones-del-tablero-->
+        <div class="sidebar-menu">
+            <ul>
+                <li>
+                    <!--                    class="active"-->
+                    <a href="{% url 'dash-board' %}" class="btn btn-outline-none btn-sm text-left" ><span> <img src="\media\default.png" height="30px"></span>
+                        <span><b>Barangay Bolo</b></span></a>
+                </li><br>
+                <li>
+                    <!--                    class="active"-->
+                    <a href="{% url 'dash-board' %}" style="text-decoration: none;" ><span class="bi bi-house"></span>
+                        <span>Dashboard</span></a>
+                </li>
+                <li>
+                    <a href="{% url 'news-feed' %}" style="text-decoration: none;" ><span class="bi bi-newspaper"></span>
+                        <span>Announcements</span></a>
+                </li>
+                <li>
+                    <a href="{% url 'home2' %}" style="text-decoration: none;" ><span class="bi bi-people-fill"></span>
+                        <span>Residents</span></a>
+                </li>
+                <li>
+                    <a href="{% url 'b-home' %}" style="text-decoration: none;" ><span class="bi bi-file-earmark-fill"></span>
+                        <span>Blotter</span></a>
+                </li>
+                <li>
+                    <a href="{% url 'bp-home' %}" style="text-decoration: none;" ><span class="fas fa-file-signature"></span>
+                        <span>Barangay Permit</span></a>
+                </li>
+                <li>
+                    <a href="{% url 'o-home' %}" style="text-decoration: none;" ><span class="fas fa-user-tie"></span>
+                        <span>Officials</span></a>
+                </li>
+                <li>
+                    <a href="{% url 'rs-home' %}" style="text-decoration: none;" ><span class="fas fa-file"></span>
+                        <span>Resolution</span></a>
+                </li>
+                <li>
+                    <a href="{% url 'other-services' %}" style="text-decoration: none;" ><span class="far fa-handshake"></span>
+                        <span>Other Services</span></a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="main-content">
+
+        <header>
+            <div class="user-wrapper">
+
+                <label for="nav-toggle">
+                    <span class="fas fa-bars"></span>
+                </label>
+            </div>
+            {% now "l, jS  F Y h:i A" %}
+            <div class="user-wrapper">
+                <img class="rounded-circle account-img" src="{{ user.profile.image.url }}" height="35px">
+                <div>
+                    <a href="{% url 'a_profile' %}">
+                        <span>{{ user.username }}</span></a><br>
+                    <small>Administrator</small>
+                </div>
+            </div>
+        </header>
+        {% block content %}
+        {% endblock %}
+
+    </div>
+
+
+</main>
+</body>
+</html>
+

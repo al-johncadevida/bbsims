@@ -1,0 +1,1076 @@
+{% load widget_tweaks %}
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- ==== Document Title ==== -->
+    {% if title %}
+    <title>BBSIMS - {{ title }}</title>
+    {% else %}
+    <title>BBSIMS</title>
+    {% endif %}
+
+    <!-- ==== Document Meta ==== -->
+    <meta name="author" content="ThemeLooks">
+    <meta name="description" content="Multipurpose Social Network HTML5 Template">
+    <meta name="keywords" content="social media, social network, forum, shop, bootstrap, html5, css3, template, responsive, retina ready">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+
+    <!-- ==== Favicon ==== -->
+    <link rel="icon" href="/media/default.png" type="image/png">
+
+    <!-- ==== Google Font ==== -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:400,500,600,700%7CRoboto:300,400,400i,500,700">
+
+    <!-- ==== Plugins Bundle ==== -->
+    <link rel="stylesheet" href="/static/blog/css/plugins.min.css">
+
+    <!-- ==== Main Stylesheet ==== -->
+    <link rel="stylesheet" href="/static/blog/style3.css">
+
+    <!-- ==== Responsive Stylesheet ==== -->
+    <link rel="stylesheet" href="/static/blog/css/responsive-style.css">
+
+    <!-- ==== Color Scheme Stylesheet ==== -->
+    <link rel="stylesheet" href="/static/blog/css/colors/color-1.css" id="changeColorScheme">
+
+    <!-- ==== Custom Stylesheet ==== -->
+    <link rel="stylesheet" href="/static/blog/css/custom.css">
+
+
+    <!-- ==== HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries ==== -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <style>
+/* width */
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey;
+  border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #404040;
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #f2f2f2;
+}
+
+.avatar {
+  vertical-align: middle;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+
+element {
+	background-color: transparent;
+}
+main {
+  scroll-behavior: smooth;
+}
+#section1 {
+  transition-duration: .50s;
+}
+#section2 {
+  transition-duration: .50s;
+}
+#section3 {
+  transition-duration: .50s;
+}
+#section4 {
+  transition-duration: .50s;
+}
+#section5 {
+  transition-duration: .50s;
+}
+    </style>
+</head>
+<body>
+<main>
+
+    <!-- Preloader Start -->
+    <div id="preloader">
+        <div class="preloader--inner"></div>
+    </div>
+    <!-- Preloader End -->
+
+    <!-- Wrapper Start -->
+    <div class="wrapper">
+        <!-- Header Section Start -->
+        <header class="header--section style--3">
+            <!-- Header Topbar Start -->
+            <div class="header--topbar bg-dark" style="background-color:white">
+                <div class="container">
+                    <!-- Header Topbar Links Start -->
+                    <ul class="header--topbar-links nav ff--primary no--stripes">
+                        <h2 style="text-align:center;color:#3b4245;"> <img src="/media/top1.png" style="height:80px; width:138;">
+                            Barangay Bolo Community Application</h2>
+                    </ul>
+                    <!-- Header Topbar Links End -->
+
+                    <!-- Header Topbar Links Start -->
+
+                    <!-- Header Topbar Links End -->
+                </div>
+            </div>
+            <!-- Header Topbar End -->
+
+            <!-- Header Navbar Start -->
+            <div class="header--navbar navbar bg-default" data-trigger="sticky" style="background-color:white">
+                <div class="container">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle style--3 collapsed" data-toggle="collapse" data-target="#headerNav">
+                            <span class="sr-only">Toggle Navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+
+                        <!-- Header Navbar Logo Start -->
+                        <div class="header--navbar-logo navbar-brand" style="background-color:white;">
+
+                            <img src="/media/default.png" style="height:80px; width:138;">
+                            <!--                            <h2>LOGO</h2>-->
+
+                        </div>
+                        <!-- Header Navbar Logo End -->
+                    </div>
+
+                    <!-- Header Search Start -->
+
+                    <!-- Header Search End -->
+
+                    <div id="headerNav" class="navbar-collapse collapse float--right" style="background-color:white">
+                        <!-- Header Nav Links Start -->
+                        <ul class="header--nav-links style--3 nav ff--primary" style="color:#3b4245;">
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                    <span>Home</span>
+                                    <i class="fas fa-caret-down"></i>
+                                </a>
+
+                                <ul class="dropdown-menu" style="color:black;">
+                                    <li><a href="#section1"><span>Login or Signup</span></a></li>
+                                    <li><a href="#section2"><span>How it Works</span></a></li>
+                                    <li><a href="#section3"><span>Why visit Us</span></a></li>
+                                    <li><a href="#section4"><span>FAQs</span></a></li>
+                                    <li><a href="#section5"><span>Footer</span></a></li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                    <span>Community</span>
+                                    <i class="fas fa-caret-down"></i>
+                                </a>
+
+                                <ul class="dropdown-menu" style="color:black;">
+                                    <li><a href="#Announcements"><span>Announcements</span></a></li>
+                                    <li><a href="#Blogs"><span>Stories</span></a></li>
+
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                    <span>About</span>
+                                    <i class="fas fa-caret-down"></i>
+                                </a>
+
+                                <ul class="dropdown-menu" style="color:black;">
+                                    <li><a href="#section5">About Us</a></li>
+                                    <li><a href="#section5">Creator</a></li>
+                                    <li><a href="#section5">Contact Us</a></li>
+                                    <li><a href="#section5">Credits</a></li>
+                                </ul>
+                            </li>
+                            <li class="dropdown megamenu">
+
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                    <span>Help</span>
+                                    <i class="fas fa-caret-down"></i>
+                                </a>
+
+                                <ul class="dropdown-menu" style="color:black;">
+                                    <li><a href="">Help1</a></li>
+                                    <li><a href="">Help2</a></li>
+                                    <li><a href="">Help3</a></li>
+                                    <li><a href="">Help4</a></li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                    <span>Account</span>
+                                    <i class="fas fa-user-tie"></i>
+                                </a>
+
+                                <ul class="dropdown-menu" style="color:black;">
+                                    <li><a href="{% url 'resident_register' %}">Sign Up</a></li>
+                                    <li><a href="{% url 'password_reset' %}">Recover Account</a></li>
+                                    <li><a href="{% url 'login_official' %}">Login Bolo</a></li>
+                                </ul>
+                            </li>
+
+                        </ul>
+                        <!-- Header Nav Links End -->
+                    </div>
+                </div>
+            </div>
+            <!-- Header Navbar End -->
+        </header>
+        <!-- Header Section End -->
+
+        <!-- Banner Section Start -->
+        <section class="banner--section" id="section1" style="height:700px;">
+            <!-- Banner Slider Start -->
+            <div class="banner--slider owl-carousel" data-owl-loop="false">
+                <!-- Banner Item Start -->
+                <div class="banner--item" data-bg-img="/media/img/banner-img/home-version-3/slider-bg-01.jpg" data-overlay="0.5">
+                    <div class="vc--parent" style="height:700px;background: url(../media/bg1-2.png) no-repeat center;">
+                        <div class="vc--child">
+                            <div class="container">
+                                <div class="row row--md-vc">
+                                    <div class="col-md-7">
+                                        <!-- Banner Content Start -->
+                                        <div class="banner--content pt--70 pb--80">
+                                            <!--                                            <div class="title">-->
+                                            <!--                                                <h1 class="h2 text-white">Welcome To Our Community</h1>-->
+                                            <!--                                            </div>-->
+                                            <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+                                            <div class="sub-title">
+                                                <h2 class="h1 text-white">Bolo Bauan, Batangas</h2>
+                                            </div>
+
+                                            <div class="desc fs--16">
+                                                <p>Bolo is a barrio in the Bauan municipality in Batangas province. According
+                                                    to the 2020 Census, it has a population of 4,270 people. This accounted
+                                                    for 4.70 percent of Bauan's total population.</p>
+                                            </div>
+
+                                            <div class="action text-uppercase">
+                                                <a href="#section2" class="btn btn-white main">Learn More</a>
+
+                                            </div>
+                                        </div>
+                                        <!-- Banner Content End -->
+                                    </div>
+
+                                    <div class="col-md-3 col-md-offset-1 col-xs-8 col-xs-offset-2 col-xxs-12">
+                                        <!-- Widget Start -->
+                                        <div class="widget" style="border-radius:25px;width:300px;background-color: rgba(255, 255, 255, .30);
+                                        backdrop-filter: blur(5px);margin-left:200px;">
+                                            <div class="card" >
+                                                <h2 class="h4 fw--700 widget--title" style="text-align:center;">Login</h2>
+
+                                                <!-- Buddy Finder Widget Start -->
+                                                <div class="buddy-finder--widget">
+                                                    <form action="{% url 'login_resident' %}" method="POST" novalidate>
+                                                        {% csrf_token %}
+                                                        {% for field in form.visible_fields %}
+                                                        <div class="form-group">
+                                                            {{ field.label_tag }}
+                                                            {% render_field field class="form-control" %}
+                                                            {% if messages%}
+                                                            {% for message in messages %}
+                                                            <span style="color:red">{{ message }}</span>
+                                                            {% endfor %}
+                                                            {% endif %}
+                                                            {% endfor %}
+                                                            <br>
+                                                            <input type="submit" value="Login" class="btn btn-block "
+                                                                   style="border-radius:25px;background:#6ecbdd;color:white;"><br>
+                                                            <a type="button" class="btn btn-block" style="color:black" href="{% url 'resident_register' %}">Sign Up</a>
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <small class="text-muted ml-2">
+                                                                <a style="color:black" href="{% url 'password_reset' %}">Forgot Password?</a>
+                                                            </small>
+                                                        </div>
+                                                    </form>
+                                                </div>
+                                            </div>
+                                            <!-- Buddy Finder Widget End -->
+                                        </div>
+                                        <!-- Widget End -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Banner Item End -->
+            </div>
+            <!-- Banner Slider End -->
+        </section>
+        <!-- Banner Section End -->
+
+        <!-- How It Works Section Start -->
+        <section class="section pt--70 pb--40" id="section2" style="height:700px;background-color:#f2f2f2;">
+            <div class="container"><br>
+                <!-- Section Title Start -->
+                <div class="section--title pb--50 text-center">
+                    <div class="title">
+                        <h2 class="h2">How It Works?</h2>
+                    </div>
+
+                    <div class="sub-title">
+                        <p>Provides a more adaptable service for the community.
+                            Especially made for complaints, announcements and events occuring in the Barangay of Bolo.</p>
+                    </div>
+                </div>
+                <!-- Section Title End -->
+
+                <div class="row">
+                    <div class="col-md-6 pb--40">
+                        <div class="row gutter--15 AdjustRow" data-scroll-reveal="group">
+                            <div class="col-xs-4 pb--15">
+                                <img src="/media/img/how-it-works-img/invite.jpg" alt="" style="border-radius:10px;">
+                            </div>
+
+                            <div class="col-xs-4 pb--15">
+                                <img src="/media/img/how-it-works-img/create.jpg" alt="" style="border-radius:10px;">
+                            </div>
+
+                            <div class="col-xs-4 pb--15">
+                                <img src="/media/img/how-it-works-img/connect.jpg" alt="" style="border-radius:10px;">
+                            </div>
+
+                            <div class="col-xs-12">
+                                <img src="/media/img/how-it-works-img/boloo1.jpg" alt="" style="border-radius:10px;">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 pb--40">
+                        <!-- Info Items Start -->
+                        <div class="info--items" data-scroll-reveal="group">
+                            <!-- Info Item Start -->
+                            <div class="info--item clearfix">
+                                <div class="icon">
+                                    <img src="/media/img/how-it-works-img/icon-01.svg" alt="" style="height:28px">
+                                </div>
+
+                                <div class="info">
+                                    <div class="title">
+                                        <h3 class="h4 fw--700">Create An Account</h3>
+                                    </div>
+
+                                    <div class="desc">
+                                        <p>Makes sure that all necessary informations of a resident will be highly
+                                            confidential and only in access by its owner.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Info Item End -->
+
+                            <!-- Info Item Start -->
+                            <div class="info--item clearfix">
+                                <div class="icon">
+                                    <img src="/media/img/how-it-works-img/icon-02.svg" alt="" style="height:30px">
+                                </div>
+
+                                <div class="info">
+                                    <div class="title">
+                                        <h3 class="h4 fw--700">Invite Friends &amp; Family</h3>
+                                    </div>
+
+                                    <div class="desc">
+                                        <p>Invite friends and family Let this platform be a part of every friends,
+                                            family, peers and loved ones.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Info Item End -->
+
+                            <!-- Info Item Start -->
+                            <div class="info--item clearfix">
+                                <div class="icon">
+                                    <img src="/media/img/how-it-works-img/icon-03.svg" alt="" style="height:25px;">
+                                </div>
+
+                                <div class="info">
+                                    <div class="title">
+                                        <h3 class="h4 fw--700">Connect With Your Community</h3>
+                                    </div>
+
+                                    <div class="desc">
+                                        <p>Share your story to the community for better understanding and judgements.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Info Item End -->
+
+                            <!-- Info Item Start -->
+                            <div class="info--item clearfix">
+                                <div class="icon">
+                                    <img src="/media/img/how-it-works-img/icon-04.svg" alt="" style="height:30px">
+                                </div>
+
+                                <div class="info">
+                                    <div class="title">
+                                        <h3 class="h4 fw--700">Enjoy the App!</h3>
+                                    </div>
+
+                                    <div class="desc">
+                                        <p>Enjoy with your family and friends Savor every moment while using the
+                                            system with the best people in your life.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Info Item End -->
+                        </div>
+                        <!-- Info Items End -->
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- How It Works Section End -->
+
+        <!-- Why Choose Us Section Start -->
+        <section class="section bg-lighter pt--80 pb--20" id="section3" style="height:700px;background: url(../media/bg3.2.png) no-repeat center;">
+            <div class="container"><br><br>
+                <div class="row row--md-vc">
+                    <div class="col-md-6 pb--60">
+                        <!-- Video Popup Start -->
+                        <div class="container-fluid">
+                            <div class="map-responsive">
+                                <iframe src="https://maps.google.com/maps?q=bolo%20bau&t=&z=13&ie=UTF8&iwloc=&output=embed" width="600" height="500" frameborder="0" style="border:0;border-radius:35px;" allowfullscreen></iframe>
+                            </div>
+                        </div>
+                        <!-- Video Popup End -->
+                    </div>
+
+                    <div class="col-md-6 pb--60">
+                        <!-- Text Block Start -->
+                        <div class="text--block">
+                            <div class="title">
+                                <h1 class="h1 fw--600">Why Visit Us?</h1>
+                            </div>
+
+                            <div class="content fs--14">
+                                <p style="color:white;">Barangay Bolo is one of the Barangay who have most establishments around the Municipality of Bauan.
+                                    In accordance to that, people visits us for the following places: The Holy Family Parish, it is
+                                    known because its big and how it can accommodate people during mass, weddings, etc. Numerous
+                                    couples have made their vows and infants have been christened in the church. Another places that
+                                    most talks about is thr Skye's Food Park, it is good for talks, get togethers and bonding time with
+                                    friends and family. As a team, we would like to use this opportunity to introduce the Barangay and
+                                    make it more accessible to people, we do not only serve the residents, the places, the datas and informations
+                                    but as well as its name to continue its prosperity all throughout the more coming years.</p>
+                            </div>
+
+                            <div class="action">
+                                <a href="https://www.philatlas.com/luzon/r04a/batangas/bauan/bolo.html?fbclid=IwAR1KcKcu1Kt8dbWQxy37ifshCn-aqA2XRW5qi0uvfktMfJCWcCjdXxkYvjY"
+                                   class="btn btn-white">Read More<i class="fas ml--10 fa-caret-right"></i></a>
+
+                            </div>
+                        </div>
+                        <!-- Text Block End -->
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Why Choose Us Section End -->
+        <!-- Members and Testimonial Section Start -->
+        <section class="section pt--70 pb--20" id="Announcements" style="height:700px;background: url(../media/bg4.2.png) no-repeat center;">
+            <div class="container"><br><br><br><br>
+                <div class="row">
+
+                    <div class="col-md-6 pb--60"><br>
+                        <!-- Text Block Start -->
+                        <div class="text--block">
+                            <div class="title">
+                                <h1 class="h1 fw--600">Get What's Latest</h1>
+                            </div>
+
+                            <div class="content fs--14" style="color:#f2f3f3">
+                                <p style="color:white;">Be notified, informed and prepared for any news nearby. Do you
+                                    feel left out at least some moment in your life? This is to provide for your main needs.
+                                    Announcements will find its way to the comfort of your homes. Users can have much time
+                                    to prepare for such announcements and ready themselves in any kind of situation there can be.</p>
+                            </div>
+
+                            <div class="action">
+                                <a href="#section1" class="btn btn-white">Be Updated Now<i class="fas ml--10 fa-caret-right"></i></a>
+                                <!--                                <a href="#" class="btn btn-primary">Get Started<i class="fas ml&#45;&#45;10 fa-caret-right"></i></a>-->
+                            </div>
+                        </div><hr>
+                        <div>
+                            <div style="float:left;width:150px;min-height:100px;" class="testimonial--items owl-carousel"  data-owl-margin="10" data-owl-autoplay="true" data-owl-animate="fadeOut">
+                                {% for all_user in all_user %}
+                                <!-- Testimonial Item Start -->
+                                <div class="d-flex justify-content-center">
+                                    <div >
+                                        <img src="{{ all_user.user.profile.image.url }}" alt="" class="avatar" style="padding:5px;margin-left:auto;margin-right:auto; height:80px; width:80px">
+                                        <h6 style="text-align:center;">{{ all_user.first_name }} {{ all_user.last_name }}</h6>
+                                    </div>
+                                </div>
+                                <!-- Testimonial Item End -->
+                                {% endfor %}
+                            </div>
+                        </div>
+                        <div style="float:right;width:70%;color:#f2f3f3;float:right;">
+                            <div class="title">
+                                <h2 class="h2 fw--600">Recent Users</h2>
+                                <p style="color:black;">Welcome to Barangay Bolo Users!, where words matter. Kudos on taking
+                                    the first step toward a better, healthier life by signing up. We'll do everything
+                                    we can to assist and support you as you make the transition to this new platform mode.</p>
+                            </div>
+                        </div>
+                        <!-- Text Block End -->
+                    </div>
+
+                    <div class="col-md-5 pb--60">
+                        <!-- Section Title Start -->
+                        <div class="section--title pb--20">
+                            <div class="title">
+                                <h2 class="h2">Announcements</h2>
+                            </div>
+                        </div>
+                        <!-- Section Title End -->
+
+                        <!-- Testimonial Items Start -->
+                        <div style="width:580px;min-height:300px;" class="testimonial--items owl-carousel" data-owl-dots="true" data-owl-margin="10" data-owl-autoplay="false" data-owl-animate="fadeOut">
+                            {% for announcements in announcements %}
+                            <!-- Testimonial Item Start -->
+                            <div class="testimonial--item clearfix" style="min-height:280px;">
+                                <div class="img mr--20 float--left">
+                                    <img width="30" src="{{ announcements.author.profile.image.url }}" alt="Avatar" class="avatar" style="padding:5px;">
+                                </div>
+                                <h4>{{ announcements.author }}<br>
+                                    <small style="color:white;"><span class="far fa-clock"></span> {{ announcements.date_posted|date:"F d, Y" }}</small></h4>
+                                <div class="info">
+
+                                    <div style="text-align:center;">
+                                        <h5>{{ announcements.content }}</h5>
+                                    </div>
+
+                                    <!--                                    <div class="rating">-->
+                                    <!--                                        <ul class="nav">-->
+                                    <!--                                            <li><i class="fa fa-star"></i></li>-->
+                                    <!--                                            <li><i class="fa fa-star"></i></li>-->
+                                    <!--                                            <li><i class="fa fa-star"></i></li>-->
+                                    <!--                                            <li><i class="fa fa-star"></i></li>-->
+                                    <!--                                            <li><i class="fa fa-star-o"></i></li>-->
+                                    <!--                                        </ul>-->
+                                    <!--                                    </div>-->
+                                </div>
+                            </div>
+                            <!-- Testimonial Item End -->
+                            {% endfor %}
+
+                        </div>
+                        <!-- Testimonial Items End -->
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Members and Testimonial Section End -->
+        <!--        Announcements starts here-->
+        <!--        <section class="section bg-lighter pt&#45;&#45;80 pb&#45;&#45;20" id="Announcements" style="height:100vh;background-image: linear-gradient(to bottom left, #cb5eee, #4be1ec);">-->
+        <!--            <div class="container"><br><br>-->
+        <!--                <div class="row row&#45;&#45;md-vc">-->
+        <!--                    <div class="col-md-6 pb&#45;&#45;60">-->
+        <!--                        &lt;!&ndash; Text Block Start &ndash;&gt;-->
+        <!--                        <div class="text&#45;&#45;block">-->
+        <!--                            <div class="title">-->
+        <!--                                <h1 class="h1 fw&#45;&#45;600">Announcements</h1>-->
+        <!--                            </div>-->
+
+        <!--                            <div class="content fs&#45;&#45;14" style="color:#f2f3f3">-->
+        <!--                                <p style="color:white;">Be notified, informed and prepared for any news nearby. Do you-->
+        <!--                                    feel left out at least some moment in your life? This is to provide for your main needs.-->
+        <!--                                    Announcements will find its way to the comfort of your homes. Users can have much time-->
+        <!--                                    to prepare for such announcements and ready themselves in any kind of situation there can be.</p>-->
+        <!--                            </div>-->
+
+        <!--                            <div class="action">-->
+        <!--                                <a href="#section1" class="btn btn-white">Be Updated Now<i class="fas ml&#45;&#45;10 fa-caret-right"></i></a>-->
+        <!--&lt;!&ndash;                                <a href="#" class="btn btn-primary">Get Started<i class="fas ml&#45;&#45;10 fa-caret-right"></i></a>&ndash;&gt;-->
+        <!--                            </div>-->
+        <!--                        </div>-->
+        <!--                        &lt;!&ndash; Text Block End &ndash;&gt;-->
+        <!--                    </div>-->
+        <!--                    <div class="col-md-6 pb&#45;&#45;60">-->
+        <!--                        &lt;!&ndash; Description start &ndash;&gt;-->
+        <!--                        <div class="container-fluid">-->
+        <!--                            <div class="table-responsive" style="height: 550px;">-->
+        <!--                            {% for announcements in announcements %}-->
+        <!--                                        <div class="card gedf-card" style="border-style: none;background-color: none;">-->
+        <!--                                            <div class="card-header" style="border-radius:25px 0px 0px 0px;height:60px">-->
+
+        <!--                                                        <div class="mr-2" style="float:left; margin-right:10px;">-->
+        <!--                                                            <img width="30" src="{{ announcements.author.profile.image.url }}" alt="Avatar" class="avatar">-->
+        <!--                                                        </div>-->
+        <!--                                                        <div class="mr-2" style="float:right; margin-right:10px;">-->
+        <!--                                                            <h6><i class="fas fa-user-tie"></i></h6>-->
+        <!--                                                        </div>-->
+        <!--                                                        <div class="ml-2">-->
+        <!--                                                            <div class="h6 m-0">{{ announcements.author }}</div>-->
+        <!--                                                            <div class="text-muted h7 mb-2" style="font-size: 12px; color:#242728;">-->
+        <!--                                                                <i class="far fa-clock"></i> {{ announcements.date_posted|date:"F d, Y" }}</div>-->
+        <!--                                                        </div>-->
+        <!--                                            </div>-->
+
+        <!--                                            <div class="card-body" style="margin-left:58px;">-->
+        <!--                                                    <h5 ><b>{{ announcements.content }}</b></h5>-->
+        <!--                                            </div><hr>-->
+
+        <!--                                        </div>-->
+        <!--                            {% endfor %}-->
+        <!--                            </div>-->
+        <!--                        </div>-->
+        <!--                        &lt;!&ndash; Description End &ndash;&gt;-->
+        <!--                    </div>-->
+        <!--                </div>-->
+        <!--            </div>-->
+        <!--        </section>-->
+        <!--        Announcements ends here-->
+        <!--        Resident blog start-->
+        <section class="section bg-lighter pt--80 pb--20" id="Blogs" style="height:700px;background: url(../media/bg5.2.png) no-repeat center;">
+            <div class="container"><br>
+                <div class="row row--md-vc">
+                    <div class="col-md-6 pb--60">
+                        <!-- Video Popup Start -->
+                        <div class="container-fluid">
+                            <div class="table-responsive" style="height: 550px;">
+                                {% for resident_post in resident_post %}
+                                <div class="card gedf-card" style="border-style: none;background-color: none;">
+                                    <div class="card-header" style="border-radius:25px 0px 0px 0px;height:60px">
+
+                                        <div class="mr-2" style="float:left; margin-right:10px;">
+                                            <img width="30" src="{{ resident_post.author.profile.image.url }}" alt="Avatar" class="avatar">
+                                        </div>
+                                        <div class="mr-2" style="float:right; margin-right:10px;">
+                                            <h6>{{ resident_post.total_likes }} <i class="fas fa-heart"></i></h6>
+                                        </div>
+                                        <div class="ml-2">
+                                            <div class="h6 m-0">{{ resident_post.author }}</div>
+                                            <div class="text-muted h7 mb-2" style="font-size: 12px;color:#242728;">
+                                                <i class="far fa-clock"></i> {{ resident_post.date_posted|date:"F d, Y" }}</div>
+                                        </div>
+                                    </div>
+
+                                    <div class="card-body" style="margin-left:58px;">
+                                        <h5 ><b>{{ resident_post.title }}</b> {{ resident_post.content }}</h5>
+                                    </div><hr>
+
+                                </div>
+                                {% endfor %}
+                            </div>
+                        </div>
+                    </div>
+                    <!--                        end-->
+
+                    <div class="col-md-6 pb--60">
+                        <!-- Text Block Start -->
+                        <div class="text--block">
+                            <div class="title">
+                                <h1 class="h1 fw--600">Users Stories</h1>
+                            </div>
+
+                            <div class="content fs--14" style="color:#f2f3f3;">
+                                <p style="color:white;">Human civilization is rich with stories, which are among the oldest
+                                    and most significant aspects of life. Share your own story to everyone else in the system.
+                                    Make them aware of your situation and the scenario on cam. Make the best out of it and live
+                                    life with the help of the systems services.</p>
+                            </div>
+
+                            <div class="action">
+                                <a href="#section1" class="btn btn-white">Create Your Own Story<i class="fas ml--10 fa-caret-right"></i></a>
+
+                            </div>
+                        </div>
+                        <!-- Text Block End -->
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--        Resident blog ends-->
+
+        <!-- FAQ and Download Section Start -->
+        <section class="section pt--70 pb--20" id="section4" style="background-color:#f2f2f2;">
+            <div class="container"><br><br>
+                <div class="row">
+                    <div class="col-md-7 pb--60">
+                        <!-- Download Block Start -->
+                        <div class="download--block" data-scroll-reveal="group">
+                            <div class="img">
+                                <img src="/media/img/download-img/mobile.png" alt="">
+                            </div>
+
+                            <div class="info">
+                                <div class="title">
+                                    <h2 class="h2 fw--600">Enjoy this Application While Using Smart Phone</h2>
+                                </div>
+
+                                <div class="content fs--12">
+                                    <p>Signup and Login now to use the App while on your phone. Appearance will change but still
+                                        manageable. The developer will release the official mobile view of this application ass soon
+                                        as its available.</p>
+                                </div>
+
+                                <div class="action text-uppercase">
+                                    <a href="{% url 'resident_register' %}" class="btn btn-sm btn-google"><i class="fas fa-user-plus"></i>  SignUp Now</a>
+                                    <a href="#section1" class="btn btn-sm btn-apple"><i class="fas fa-user"></i>  Login Now</a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Download Block End -->
+                    </div>
+
+                    <div class="col-md-5 pb--60">
+                        <!-- FAQ Items Start -->
+                        <div class="faq--items" id="faqItems" data-scroll-reveal="group">
+                            <div class="title pb--20">
+                                <h2 class="h2 fw--600">Frequently Asked Question</h2>
+                            </div>
+
+                            <!-- FAQ Item Start -->
+                            <div class="faq--item style--1 panel">
+                                <div class="title">
+                                    <h3 class="h6 fw--700 text-darker">
+                                        <a href="#faqItem01" data-parent="#faqItems" data-toggle="collapse" class="collapsed">
+                                            <span>How can I register?</span>
+                                        </a>
+                                    </h3>
+                                </div>
+
+                                <div id="faqItem01" class="content collapse">
+                                    <div class="content--inner">
+                                        <p>Point the mouse cursor to the Home button and choose "Login or Signup".
+                                            Choose Sign Up then provide the necessary fields with honest data then signup.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- FAQ Item End -->
+
+                            <!-- FAQ Item Start -->
+                            <div class="faq--item style--1 panel">
+                                <div class="title">
+                                    <h3 class="h6 fw--700 text-darker">
+                                        <a href="#faqItem02" data-parent="#faqItems" data-toggle="collapse" class="collapsed">
+                                            <span>What are the benefits of using the App?</span>
+                                        </a>
+                                    </h3>
+                                </div>
+
+                                <div id="faqItem02" class="content collapse">
+                                    <div class="content--inner">
+                                        <p>The main benefit of using the app is to make the lives around the community more favorable
+                                            and adaptable to them. Easpecially that technology never ceases to stop, taking its
+                                            advantages to today's world, the application will be a lot of help to the residents.
+                                            Aside from people, the system also serves and makes sure that the confidentiality of
+                                            all information and datas of the barangay will be highly kept. This is to certify that
+                                            as the world changes, we can also adapt and learn to embrace its purpose day by day.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- FAQ Item End -->
+
+                            <!-- FAQ Item Start -->
+                            <div class="faq--item style--1 panel">
+                                <div class="title">
+                                    <h3 class="h6 fw--700 text-darker">
+                                        <a href="#faqItem03" data-parent="#faqItems" data-toggle="collapse" class="collapsed">
+                                            <span>How can I contact the Barangay?</span>
+                                        </a>
+                                    </h3>
+                                </div>
+
+                                <div id="faqItem03" class="content collapse">
+                                    <div class="content--inner">
+                                        Point the mouse cursor to the About button and choose "Contact Us".
+                                        Email us using the official email account of barangay Bolo or reach us
+                                        through our Social Media Account.
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- FAQ Item End -->
+                        </div>
+                        <!-- FAQ Items End -->
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- FAQ and Download Section End -->
+
+        <!-- Footer Section Start -->
+        <footer class="footer--section" id="section5" style="height:600px">
+            <!-- Footer Widgets Start -->
+            <div class="footer--widgets pt--70 pb--20 bg-lightdark" data-bg-img="/media/img/footer-img/footer-widgets-bg.png">
+                <div class="container" style="margin-bottom:0px;">
+                    <div class="row AdjustRow">
+                        <div class="col-md-3 col-xs-6 col-xxs-12 pb--60">
+                            <!-- Widget Start -->
+                            <div class="widget">
+                                <h2 class="h4 fw--700 widget--title">About Us</h2>
+
+                                <!-- Text Widget Start -->
+                                <div class="text--widget">
+                                    <p>This is a simple application where users can browse, create and login</p>
+
+                                    <p>Users are able to obtain information specially announcement from the barangay bolo administration.
+                                        It lets the user create their own blogs and interact with each other.</p>
+                                </div>
+                                <!-- Text Widget End -->
+                                <br>
+                                <img src="/media/default.png" style="height:130px;">
+                            </div>
+                            <!-- Widget End -->
+
+                            <!-- Widget Start -->
+                            <div class="widget">
+
+                                <!-- Newsletter Widget End -->
+                            </div>
+                            <!-- Widget End -->
+                        </div>
+
+                        <div class="col-md-3 col-xs-6 col-xxs-12 pb--60">
+                            <!-- Widget Start -->
+                            <div class="widget">
+                                <h2 class="h4 fw--700 widget--title">Reach Us</h2>
+
+                                <!-- Recent Posts Widget Start -->
+                                <div class="recent-posts--widget">
+                                    <ul class="nav">
+                                        <li>
+                                            <p class="date fw--300">
+                                                <a><i class="fab fa-google"></i> Email</a>
+                                            </p>
+                                            <p class="title fw--700">
+                                                <a>barangayboloservicesMIS@gmail.com</a>
+                                            </p>
+                                        </li>
+                                        <li>
+                                            <p class="date fw--300">
+                                                <a><i class="fab fa-facebook"></i> Messenger</a>
+                                            </p>
+                                            <p class="title fw--700">
+                                                <a>Barangay Bolo</a>
+                                            </p>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <!-- Recent Posts Widget End -->
+                            </div>
+                            <!-- Widget End -->
+
+                            <!-- Widget Start -->
+                            <div class="widget">
+                                <h2 class="h4 fw--700 widget--title">Social Media</h2>
+
+                                <!-- Nav Widget Start -->
+                                <div class="nav--widget">
+                                    <ul class="nav fw--700">
+                                        <li>
+                                            <a href="https://www.facebook.com/Barangay-Bolo-Updates-102027265440740">
+                                                <i class="fab fa-facebook"></i>
+                                                <span class="text">Facebook</span>
+
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="">
+                                                <i class="fab fa-twitter"></i>
+                                                <span class="text">Twitter</span>
+
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="">
+                                                <i class="fab fa-instagram"></i>
+                                                <span class="text">Instagram</span>
+
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <!-- Nav Widget End -->
+                            </div>
+                            <!-- Widget End -->
+                        </div>
+
+                        <div class="col-md-3 col-xs-6 col-xxs-12 pb--60">
+                            <!-- Widget Start -->
+                            <div class="widget">
+                                <h2 class="h4 fw--700 widget--title">About the Creator</h2>
+
+                                <!-- Recent Active Members Widget Start -->
+                                <div class="recent-active-members--widget style--1">
+                                    <div class="img">
+                                        <a href="https://www.facebook.com/johnalbanzon/"><img src="/media/img/widgets-img/recent-active-members/ac2.jpg" alt=""></a>
+                                    </div>
+
+                                    <div class="img">
+                                        <a href="https://www.facebook.com/rowsheley"><img src="/media/img/widgets-img/recent-active-members/rc2.jpg" alt=""></a>
+                                    </div>
+
+                                    <div class="img">
+                                        <a href="https://www.facebook.com/evitajezriel"><img src="/media/img/widgets-img/recent-active-members/em2.jpg" alt=""></a>
+                                    </div>
+
+
+                                </div>
+                                <p><b>Cadevida, Al-John B.</b><br>- Fourth year college student at Batangas State University,
+                                    course of BS Information Technology major in Service Management.<br>
+                                    <b>Caguete, Rochelli.</b><br>- Fourth year college student at Batangas State University,
+                                    course of BS Information Technology major in Service Management.<br>
+                                    <b>Magana, Evita Jezriel</b><br>- Fourth year college student at Batangas State University,
+                                    course of BS Information Technology major in Service Management.</p>
+                                <!-- Recent Active Members Widget End -->
+                            </div>
+                            <!-- Widget End -->
+
+                            <!-- Widget Start -->
+
+                            <!-- Widget End -->
+                        </div>
+
+                        <div class="col-md-3 col-xs-6 col-xxs-12 pb--60">
+                            <!-- Widget Start -->
+                            <div class="widget">
+                                <h2 class="h4 fw--700 widget--title"><i class="far fa-copyright"></i></h2>
+
+                                <!-- Links Widget Start -->
+                                <div class="links--widget">
+                                    <p>Copyright &copy; BarangayBOLO. All Rights Reserved.</p>
+                                </div>
+                                <!-- Links Widget End -->
+                            </div>
+                            <!-- Widget End -->
+
+                            <!-- Widget Start -->
+                            <div class="widget">
+                                <h2 class="h4 fw--700 widget--title"><i class="fas fa-layer-group"></i></h2>
+
+                                <!-- Tags Widget Start -->
+                                <div class="tags--widget">
+                                    <p>Design and Developed by Al-John <a href="https://www.facebook.com/johnalbanzon/"> Cadevida</a></p>
+                                </div>
+                                <!-- Tags Widget End -->
+                            </div>
+                            <!-- Widget End -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Footer Widgets End -->
+
+            <!--             Footer Copyright Start-->
+            <div class="footer--copyright pt--30 pb--30 bg-darkest">
+                <div class="container">
+                    <div class="text fw--500 fs--14 float--center">
+                        <p style="text-align:center;">Copyright &copy; Barangay<span>BOLO</span>. All Rights Reserved.</p>
+                        <p style="text-align:center;">Design and Developed by <i class="far fa-heart text-primary"></i><a href=""> Al-John Cadevida</a></p>
+                    </div>
+
+                </div>
+            </div>
+            <!--             Footer Copyright End-->
+        </footer>
+        <!-- Footer Section End -->
+
+        <!--announcemtns and newsfered-->
+        <!--        <h6 style="margin-left:8px;">Announcements</h6><hr>-->
+
+        <!--              {% for announcements in announcements %}-->
+        <!--                <div class="card gedf-card" style="display:flex;border-radius:25px; margin-top:10px;margin-left:10px;border-style: none;background-color: #f1f5f9;">-->
+        <!--                    <div class="card-header" style="border-radius:25px 0px 0px 0px;height:60px">-->
+        <!--                        <div class="d-flex justify-content-between ">-->
+        <!--                            <div class="d-flex justify-content-between ">-->
+        <!--                                <div class="mr-2">-->
+        <!--                                    <img class="rounded-circle" width="35" src="{{ announcements.author.profile.image.url }}" alt="">-->
+        <!--                                </div>-->
+        <!--                                <div class="ml-2">-->
+        <!--                                    <div class="h6 m-0">{{ announcements.author }}</div>-->
+        <!--                                    <small><div class="h7 text-muted">{{ announcements.author.email }}</div></small>-->
+        <!--                                </div>-->
+        <!--                            </div>-->
+        <!--                            <div>-->
+
+        <!--                            </div>-->
+        <!--                        </div>-->
+
+        <!--                    </div>-->
+        <!--                    <div class="card-body">-->
+        <!--                        <div class="text-muted h7 mb-2" style="font-size: 12px;"> <i class="far fa-clock"></i> {{ announcements.date_posted|date:"F d, Y" }}</div>-->
+        <!--                            <h6 class="card-title">{{ announcements.content }}</h6>-->
+        <!--                    </div>-->
+        <!--&lt;!&ndash;                    <div class="card-footer">&ndash;&gt;-->
+        <!--&lt;!&ndash;                        <a href="#" class="card-link"><i class="fa fa-gittip"></i> Like</a>&ndash;&gt;-->
+        <!--&lt;!&ndash;                        <a href="#" class="card-link"><i class="fa fa-comment"></i> Comment</a>&ndash;&gt;-->
+        <!--&lt;!&ndash;                        <a href="#" class="card-link"><i class="fa fa-mail-forward"></i> Share</a>&ndash;&gt;-->
+        <!--&lt;!&ndash;                    </div>&ndash;&gt;-->
+        <!--                </div>-->
+        <!--    {% endfor %}-->
+
+        <!--        {% for resident_post in resident_post %}-->
+        <!--                <div class="card gedf-card" style="display:flex;margin-top:10px;border-style: none;margin-left:40px;margin-right:30px;border-radius: 25px;;">-->
+        <!--                    <div class="card-header" style="background: #fff;border-radius: 25px 25px 0px 0px;text-align: left;">-->
+        <!--                        <div class="d-flex justify-content-between align-items-center">-->
+        <!--                            <div class="d-flex justify-content-between align-items-center">-->
+        <!--                                <div class="mr-2">-->
+        <!--                                    <img class="rounded-circle" width="45" src="{{ resident_post.author.profile.image.url }}" alt="">-->
+        <!--                                </div>-->
+        <!--                                <div class="ml-2">-->
+        <!--                                    <div class="h5 m-0">{{ resident_post.author }}</div>-->
+        <!--                                    <div class="h7 text-muted">{{ resident_post.author.email }}</div>-->
+        <!--                                </div>-->
+        <!--                            </div>-->
+
+        <!--                        </div>-->
+
+        <!--                    </div>-->
+        <!--                    <div class="card-body" style="text-align: left;">-->
+        <!--                        <small><div class="text-muted h7 mb-2"> <i class="fa fa-clock-o"></i>{{ resident_post.date_posted|date:"F d, Y" }}</div></small>-->
+        <!--                            <h5 class="card-title">{{ resident_post.title }}</h5>-->
+        <!--                        <p class="card-text">-->
+        <!--                            {{ resident_post.content }}-->
+        <!--                        </p>-->
+        <!--                    </div>-->
+        <!--                    <div class="card-footer" style="background: #fff;border-radius: 0px 0px 25px 25px ;">-->
+        <!--&lt;!&ndash;                        <a href="#" class="card-link"><i class="fa fa-gittip"></i> Like</a>&ndash;&gt;-->
+        <!--&lt;!&ndash;                        <a href="#" class="card-link"><i class="fa fa-comment"></i> Comment</a>&ndash;&gt;-->
+        <!--&lt;!&ndash;                        <a href="#" class="card-link"><i class="fa fa-mail-forward"></i> Share</a>&ndash;&gt;-->
+
+        <!--                    </div>-->
+        <!--                </div>-->
+        <!--    {% endfor %}-->
+
+
+
+    </div>
+    <!-- Wrapper End -->
+
+    <!-- Back To Top Button Start -->
+    <div id="backToTop">
+        <a href="#" class="btn"><i class="fas fa-caret-up"></i></a>
+    </div>
+    <!-- Back To Top Button End -->
+
+    <!-- ==== Plugins Bundle ==== -->
+    <script src="/static/blog/js/plugins.min.js"></script>
+
+    <!-- ==== Color Switcher Plugin ==== -->
+    <!--    <script src="/static/blog/js/color-switcher.min.js"></script>-->
+
+    <!-- ==== Main Script ==== -->
+    <script src="/static/blog/js/main.js"></script>
+</main>
+</body>
+</html>

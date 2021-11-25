@@ -1,0 +1,58 @@
+{% extends "dash/base2.html" %}
+
+{% block content %}
+<link rel="stylesheet" href="/static/dash/style2.css">
+<div style="margin-left:54px; margin-right:49px; margin-top:114px;">
+  <div class="recent-grid">
+                <div class="projects">
+                    <div class="card" style="border-radius: 25px;">
+                        <div class="card-header" style="border-radius: 25px;">
+                            <h3>Official's Information</h3>
+
+                            <a type="button" href="{% url 'to-update' object.id %}" class="btn btn-info btn-lg btn-sm">
+                              Update<span class="las la-arrow-right">
+                            </span></a>
+                        </div>
+
+                        <div class="card-body">
+                            <div class="table-responsive">
+                                <table width="100%">
+                                    <div class="container">
+                                      <h5><b>Position: </b> {{ termofficial.position }}</h5>
+                                      <h5><b>Last Name: </b> {{ termofficial.last_name }}</h5>
+                                      <h5><b>First Name: </b> {{ termofficial.first_name }}</h5>
+                                      <h5><b>Middle Name: </b> {{ termofficial.middle_name }}</h5>
+                                      <h5><b>Gender: </b> {{ termofficial.gender }}</h5>
+                                      <h5><b>Age: </b> {{ termofficial.age }}</h5>
+                                      <h5><b>Address: </b> {{ termofficial.address }}</h5>
+                                      <h5><b>Start of Term: </b> {{ termofficial.start_of_term }}</h5>
+                                      <h5><b>End of Term: </b> {{ termofficial.end_of_term }}</h5>
+								    </div>
+								  <br>
+                                </table><hr>
+                              <a type="button" href="{% url 'o-home' %}" class="btn btn-outline-danger btn-lg btn-sm btn-block">
+                              Close<span class="las la-arrow-right">
+                            </span></a>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="customers" style="position: fixed; right: 40px;">
+							  <div class="card" style="border-radius: 25px;width:250px"><br>
+								<img class="rounded-circle article-img" src="{{ termofficial.image.url }}" alt="Card image" style="width:200px;height:200px; margin: auto;">
+								<div class="card-body">
+								  <h4 class="card-title" style="text-align: center;">{{ termofficial.last_name }}, {{ termofficial.first_name }}
+                                      {{ termofficial.middle_name }}</h4><hr>
+                                    <p style="text-align: center;">{{ termofficial.start_of_term }} - {{ termofficial.end_of_term }}</p>
+								</div>
+							  </div>
+							  <br>
+            </div>
+  </div>
+</div>
+{% endblock content %}
+<!--<button type="button" class="btn btn-info btn-lg btn-block btn-sm">
+                                    <a href="{% url 'bc-view' object.id %}" style="color:inherit">Barangay Clearance</a>
+                                  </button>-->

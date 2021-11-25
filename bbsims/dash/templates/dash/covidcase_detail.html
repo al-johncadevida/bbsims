@@ -1,0 +1,51 @@
+{% extends "dash/base2.html" %}
+{% block content %}
+<!--<link rel="stylesheet" href="/static/blog/main.css">-->
+<style>
+small{
+color:red
+}
+</style>
+<div style="margin-left:54px; margin-right:155px; margin-top:114px;">
+    <div class="projects">
+        <div class="card" style="border-radius: 25px;">
+            <div class="card-header" style="border-radius: 25px;">
+                <a type="button" href="{% url 'cc-update' object.id %}" class="btn btn-info btn-lg btn-sm">
+                    Update<span class="las la-arrow-right">
+                            </span></a><a type="button" href="{% url 'cc-delete' object.id %}" class="btn btn-danger btn-lg btn-sm">
+                Delete<span class="las la-arrow-right">
+                            </span></a>
+            </div>
+
+            <div class="card-body">
+                <h2 style="text-align:center">Case Details</h2><hr>
+                <div class="row">
+                    <div class="col-12">
+                        <small>Name:</small> {{ covidcase.name}}
+                    </div><hr>
+                    <div class="col-12">
+                        <small >Gender:</small> {{ covidcase.gender }}
+                    </div><hr>
+                    <div class="col-12">
+                        <small >Age:</small> {{ covidcase.age }}
+                    </div><hr>
+                    <div class="col-12">
+                        <small >Birthday:</small> {{ covidcase.birthday }}
+                    </div><hr>
+                    <div class="col-12">
+                        <small >Status:</small> {{ covidcase.status }}
+                    </div>
+                </div><hr>
+                <div style="float:left">
+                    <a type="button" style="width:100px;margin-left:20px;" href="{% url 'cc-home' %}" class="btn btn-outline-danger btn-sm">
+                        Close<span class="las la-arrow-right">
+                            </span></a></div>
+                <div style="float:right">
+                </div>
+            </div>
+        </div><br>
+
+    </div>
+</div>
+</div>
+{% endblock content %}

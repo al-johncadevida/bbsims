@@ -1,0 +1,66 @@
+{% extends "dash/base2.html" %}
+{% block content %}
+<main>
+    <div style="margin-left:54px; margin-right:105px; margin-top:50px;">
+        <h1 style="text-align: center; color: black;">Households</h1><hr>
+        <!--Tabla-->
+        <div class="card" style="border-radius: 25px;background-color:#f2f2f2">
+            <div class="card-header" style="border-radius: 25px 25px 0px 0px;background-image: linear-gradient(to bottom right, #48a7d1, #1a4e66);">
+
+                <div class="search-wrapper">
+                    <span class="bi bi-search"></span>
+                    <input type="text" id="myInput" onkeyup="myFunction()"  placeholder="Search Family name" />
+                </div>
+                <a type="button" href="{% url 'hh-create' %}" class="btn btn-info btn-lg btn-sm">
+                    <span class="bi bi-plus"></span> Add Household</a>
+            </div>
+
+            <div class="card-body">
+                <div class="table-responsive" style="height: 300px;">
+                    <table id="myTable" width="100%" >
+
+                        <thead>
+                        <tr>
+                            <td>Family Name</td>
+                            <td>Number of Member</td>
+
+                        </tr>
+                        </thead>
+                        <tbody>
+                        {% for household in households %}
+                        <tr>
+                            <td><a href="{% url 'hh-detail' household.id %}">{{ household.family_name }}</a></td>
+                            <td>{{ household.number_of_member }}</td>
+                        </tr>
+                        {% endfor %}
+                        </tbody>
+
+                    </table>
+                </div>
+            </div>
+
+        </div>
+
+        <script>
+function myFunction() {
+  var input, filter, table, tr, td, i, txtValue;
+  input = document.getElementById("myInput");
+  filter = input.value.toUpperCase();
+  table = document.getElementById("myTable");
+  tr = table.getElementsByTagName("tr");
+  for (i = 0; i < tr.length; i++) {
+    td = tr[i].getElementsByTagName("td")[0];
+    if (td) {
+      txtValue = td.textContent || td.innerText;
+      if (txtValue.toUpperCase().indexOf(filter) > -1) {
+        tr[i].style.display = "";
+      } else {
+        tr[i].style.display = "none";
+      }
+    }
+  }
+}
+</script>
+    </div>
+</main>
+{% endblock content %}

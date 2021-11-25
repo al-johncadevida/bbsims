@@ -1,0 +1,531 @@
+{% extends "dash/base2.html" %}
+{% block content %}
+<style>
+.card {
+     margin: 0 auto; /* Added */
+     float: none; /* Added */
+     margin-bottom: 10px; /* Added */
+}
+</style>
+<div style="margin-left:24px; margin-right:89px; margin-top:50px;margin-bottom:50px;">
+    <h1 style="text-align: center; color: black;">Organization</h1><hr>
+    {% for tnow in tnow %}
+    <p style="text-align:center"><small>{{ tnow.term_year }}</small></p>
+    <div class="card align-items-center" style="width: 180px;border-radius: 13px;">
+        <div class="card-block text-center">
+            <p class="card-title"><b>Barangay Chairman</b></p>
+            <small class="card-text">{{ tnow.Barangay_chairman }}</small>
+        </div>
+    </div>
+    <div class="row">
+    <div class="col-sm-3">
+        <div class="card align-items-center" style="width: 180px;border-radius: 13px;">
+        <div class="card-block text-center">
+            <small class="card-title"><b>Peace and Order</b></small><br>
+            <small class="card-text">{{ tnow.peace_and_order }}</small>
+        </div>
+        </div>
+    </div>
+    <div class="col-sm-3">
+        <div class="card align-items-center" style="width: 180px;border-radius: 13px;">
+        <div class="card-block text-center">
+            <small class="card-title"><b>Environmental Protection and Safety</b></small><br>
+            <small class="card-text">{{ tnow.environmental_protection_and_safety }}</small>
+        </div>
+        </div>
+    </div>
+    <div class="col-sm-3">
+        <div class="card align-items-center" style="width: 180px;border-radius: 13px;">
+        <div class="card-block text-center">
+            <small class="card-title"><b>Health and Sanitation </b></small><br>
+            <small class="card-text">{{ tnow.health_and_sanitation }}</small>
+        </div>
+        </div>
+    </div>
+    <div class="col-sm-3">
+        <div class="card align-items-center" style="border-radius: 13px;width: 180px;">
+        <div class="card-block text-center">
+            <small class="card-title"><b>Public Works and Infrastructure </b></small><br>
+            <small class="card-text">{{ tnow.public_works_and_infrastructure }}</small>
+        </div>
+        </div>
+    </div>
+    <div class="col-sm-3">
+        <div class="card align-items-center" style="border-radius: 13px;width: 180px;">
+        <div class="card-block text-center">
+            <small class="card-title"><b>Law Ordinances, Education and Family </b></small><br>
+            <small class="card-text">{{ tnow.law_ordinances_education_and_family }}</small>
+        </div>
+        </div>
+    </div>
+        <div class="col-sm-3">
+    <div class="card align-items-center" style="border-radius: 13px;width: 180px;">
+        <div class="card-block text-center">
+            <small class="card-title"><b>Transportation and Communication</b></small><br>
+            <small class="card-text">{{ tnow.transportation_and_communication }}</small>
+        </div>
+    </div>
+        </div>
+        <div class="col-sm-3">
+    <div class="card align-items-center" style="border-radius: 13px;width: 180px;">
+        <div class="card-block text-center">
+            <small class="card-title"><b>Budget and Appropriation</b></small><br>
+            <small class="card-text">{{ tnow.budget_and_appropriation }}</small>
+        </div>
+    </div>
+        </div>
+        <div class="col-sm-3">
+        <div class="card align-items-center" style="border-radius: 13px;width: 180px;">
+        <div class="card-block text-center">
+            <small class="card-title"><b>SK Chairman</b></small><br>
+            <small class="card-text">{{ tnow.sk_chairman }}</small>
+        </div>
+    </div>
+        </div>
+        <div class="col-sm-3">
+     <div class="card align-items-center" style="border-radius: 13px;width: 180px;">
+        <div class="card-block text-center">
+            <p class="card-title"><b>SK Councilor</b></p>
+            <small class="card-text">{{ tnow.sk_councilor1 }}</small>
+        </div>
+    </div>
+        </div>
+        <div class="col-sm-3">
+        <div class="card align-items-center" style="border-radius: 13px;width: 180px;">
+        <div class="card-block text-center">
+            <p class="card-title"><b>SK Councilor</b></p>
+            <small class="card-text">{{ tnow.sk_councilor2 }}</small>
+        </div>
+    </div>
+        </div>
+        <div class="col-sm-3">
+        <div class="card align-items-center" style="border-radius: 13px;width: 180px;">
+        <div class="card-block text-center">
+            <p class="card-title"><b>SK Councilor</b></p>
+            <small class="card-text">{{ tnow.sk_councilor3 }}</small>
+        </div>
+    </div>
+        </div>
+        <div class="col-sm-3">
+        <div class="card align-items-center" style="border-radius: 13px;width: 180px;">
+        <div class="card-block text-center">
+            <p class="card-title"><b>SK Councilor</b></p>
+            <small class="card-text">{{ tnow.sk_councilor4 }}</small>
+        </div>
+    </div>
+        </div>
+        <div class="col-sm-3">
+     <div class="card align-items-center" style="border-radius: 13px;width: 180px;">
+        <div class="card-block text-center">
+            <p class="card-title"><b>Barangay Secretary</b></p>
+            <small class="card-text">{{ tnow.barangay_secretary }}</small>
+        </div>
+    </div>
+        </div>
+        <div class="col-sm-3">
+        <div class="card align-items-center" style="border-radius: 13px;width: 180px;">
+        <div class="card-block text-center">
+            <p class="card-title"><b>Barangay Treasurer</b></p>
+            <small class="card-text">{{ tnow.barangay_treasurer }}</small>
+        </div>
+    </div>
+        </div>
+        <div class="col-sm-3">
+        <div class="card align-items-center" style="border-radius: 13px;width: 180px;">
+        <div class="card-block text-center">
+            <p class="card-title"><b>Barangay Accounting Clerk</b></p>
+            <small class="card-text">{{ tnow.barangay_accounting_clerk }}</small>
+        </div>
+    </div>
+        </div>
+        <div class="col-sm-3">
+        <div class="card align-items-center" style="border-radius: 13px;width: 180px;">
+        <div class="card-block text-center">
+            <p class="card-title"><b>Barangay Clerk</b></p>
+            <small class="card-text">{{ tnow.barangay_clerk }}</small>
+        </div>
+    </div>
+        </div>
+        <div class="col-sm-3">
+        <div class="card align-items-center" style="border-radius: 13px;width: 180px;">
+        <div class="card-block text-center">
+            <p class="card-title"><b>Assistant Clerk</b></p>
+            <small class="card-text">{{ tnow.assistant_clerk }}</small>
+        </div>
+    </div>
+        </div>
+        <div class="col-sm-3">
+        <div class="card align-items-center" style="border-radius: 13px;width: 180px;">
+        <div class="card-block text-center">
+            <p class="card-title"><b>Barangay Day Care Worker</b></p>
+            <small class="card-text">{{ tnow.barangay_day_care_worker }}</small>
+        </div>
+    </div>
+        </div>
+        <div class="col-sm-3">
+     <div class="card align-items-center" style="border-radius: 13px;width: 180px;">
+        <div class="card-block text-center">
+            <p class="card-title"><b>Barangay Agrarian</b></p>
+            <small class="card-text">{{ tnow.barangay_agrarian }}</small>
+        </div>
+    </div>
+        </div>
+        </div><hr>
+
+        <p style="text-align:center"><b>Barangay Health Worker</b></p>
+    <div class="row">
+        <div class="col-sm-3">
+    <div class="card align-items-center" style="border-radius: 13px;width: 180px;">
+        <div class="card-block text-center">
+            <small class="card-text">{{ tnow.barangay_health_worker1 }}</small>
+        </div>
+    </div>
+        </div>
+        <div class="col-sm-3">
+        <div class="card align-items-center" style="border-radius: 13px;width: 180px;">
+        <div class="card-block text-center">
+            <small class="card-text">{{ tnow.barangay_health_worker2 }}</small>
+        </div>
+    </div>
+        </div>
+        <div class="col-sm-3">
+        <div class="card align-items-center" style="border-radius: 13px;width: 180px;">
+        <div class="card-block text-center">
+            <small class="card-text">{{ tnow.barangay_health_worker3 }}</small>
+        </div>
+    </div>
+        </div>
+        <div class="col-sm-3">
+        <div class="card align-items-center" style="border-radius: 13px;width: 180px;">
+        <div class="card-block text-center">
+            <small class="card-text">{{ tnow.barangay_health_worker4 }}</small>
+        </div>
+    </div>
+        </div>
+        <div class="col-sm-3">
+        <div class="card align-items-center" style="border-radius: 13px;width: 180px;">
+        <div class="card-block text-center">
+            <small class="card-text">{{ tnow.barangay_health_worker5 }}</small>
+        </div>
+    </div>
+        </div>
+        <div class="col-sm-3">
+        <div class="card align-items-center" style="border-radius: 13px;width: 180px;">
+        <div class="card-block text-center">
+            <small class="card-text">{{ tnow.barangay_health_worker6 }}</small>
+        </div>
+    </div>
+        </div>
+        <div class="col-sm-3">
+        <div class="card align-items-center" style="border-radius: 13px;width: 180px;">
+        <div class="card-block text-center">
+            <small class="card-text">{{ tnow.barangay_health_worker7 }}</small>
+        </div>
+    </div>
+        </div>
+        <div class="col-sm-3">
+        <div class="card align-items-center" style="border-radius: 13px;width: 180px;">
+        <div class="card-block text-center">
+            <small class="card-text">{{ tnow.barangay_health_worker8 }}</small>
+        </div>
+    </div>
+        </div>
+        <div class="col-sm-3">
+        <div class="card align-items-center" style="border-radius: 13px;width: 180px;">
+        <div class="card-block text-center">
+            <small class="card-text">{{ tnow.barangay_health_worker9 }}</small>
+        </div>
+    </div>
+        </div>
+        <div class="col-sm-3">
+        <div class="card align-items-center" style="border-radius: 13px;width: 180px;">
+        <div class="card-block text-center">
+            <small class="card-text">{{ tnow.barangay_health_worker10 }}</small>
+        </div>
+    </div>
+        </div>
+        <div class="col-sm-3">
+        <div class="card align-items-center" style="border-radius: 13px;width: 180px;">
+        <div class="card-block text-center">
+            <small class="card-text">{{ tnow.barangay_health_worker11 }}</small>
+        </div>
+    </div>
+        </div>
+        <div class="col-sm-3">
+        <div class="card align-items-center" style="border-radius: 13px;width: 180px;">
+        <div class="card-block text-center">
+            <small class="card-text">{{ tnow.barangay_health_worker12 }}</small>
+        </div>
+    </div>
+        </div></div>
+    <hr>
+        <p style="text-align:center"><b>Barangay Tanod</b></p>
+    <div class="row">
+        <div class="col-sm-3">
+    <div class="card align-items-center" style="border-radius: 13px;width: 180px;">
+        <div class="card-block text-center">
+            <small class="card-text">{{ tnow.barangay_tanod1 }}</small>
+        </div>
+    </div>
+        </div>
+        <div class="col-sm-3">
+        <div class="card align-items-center" style="border-radius: 13px;width: 180px;">
+        <div class="card-block text-center">
+            <small class="card-text">{{ tnow.barangay_tanod2 }}</small>
+        </div>
+    </div>
+        </div>
+        <div class="col-sm-3">
+     <div class="card align-items-center" style="border-radius: 13px;width: 180px;">
+        <div class="card-block text-center">
+            <small class="card-text">{{ tnow.barangay_tanod3 }}</small>
+        </div>
+    </div>
+        </div>
+        <div class="col-sm-3">
+        <div class="card align-items-center" style="border-radius: 13px;width: 180px;">
+        <div class="card-block text-center">
+            <small class="card-text">{{ tnow.barangay_tanod4 }}</small>
+        </div>
+    </div>
+        </div>
+        <div class="col-sm-3">
+        <div class="card align-items-center" style="border-radius: 13px;width: 180px;">
+        <div class="card-block text-center">
+            <small class="card-text">{{ tnow.barangay_tanod5 }}</small>
+        </div>
+    </div>
+        </div>
+        <div class="col-sm-3">
+        <div class="card align-items-center" style="border-radius: 13px;width: 180px;">
+        <div class="card-block text-center">
+            <small class="card-text">{{ tnow.barangay_tanod6 }}</small>
+        </div>
+    </div>
+        </div>
+        <div class="col-sm-3">
+        <div class="card align-items-center" style="border-radius: 13px;width: 180px;">
+        <div class="card-block text-center">
+            <small class="card-text">{{ tnow.barangay_tanod7 }}</small>
+        </div>
+    </div>
+        </div>
+        <div class="col-sm-3">
+        <div class="card align-items-center" style="border-radius: 13px;width: 180px;">
+        <div class="card-block text-center">
+            <small class="card-text">{{ tnow.barangay_tanod8 }}</small>
+        </div>
+    </div>
+        </div>
+        <div class="col-sm-3">
+        <div class="card align-items-center" style="border-radius: 13px;width: 180px;">
+        <div class="card-block text-center">
+            <small class="card-text">{{ tnow.barangay_tanod9 }}</small>
+        </div>
+    </div>
+        </div>
+        <div class="col-sm-3">
+        <div class="card align-items-center" style="border-radius: 13px;width: 180px;">
+        <div class="card-block text-center">
+            <small class="card-text">{{ tnow.barangay_tanod10 }}</small>
+        </div>
+    </div>
+        </div>
+    </div>
+    <hr>
+        <p style="text-align:center"><b>Barangay Justice</b></p>
+    <div class="row">
+        <div class="col-sm-3">
+    <div class="card align-items-center" style="border-radius: 13px;width: 180px;">
+        <div class="card-block text-center">
+            <small class="card-text">{{ tnow.barangay_justice1 }}</small>
+        </div>
+    </div>
+        </div>
+        <div class="col-sm-3">
+        <div class="card align-items-center" style="border-radius: 13px;width: 180px;">
+        <div class="card-block text-center">
+            <small class="card-text">{{ tnow.barangay_justice2 }}</small>
+        </div>
+    </div>
+        </div>
+        <div class="col-sm-3">
+        <div class="card align-items-center" style="border-radius: 13px;width: 180px;">
+        <div class="card-block text-center">
+            <small class="card-text">{{ tnow.barangay_justice3 }}</small>
+        </div>
+    </div>
+        </div>
+        <div class="col-sm-3">
+        <div class="card align-items-center" style="border-radius: 13px;width: 180px;">
+        <div class="card-block text-center">
+            <small class="card-text">{{ tnow.barangay_justice4 }}</small>
+        </div>
+    </div>
+        </div>
+        <div class="col-sm-3">
+        <div class="card align-items-center" style="border-radius: 13px;width: 180px;">
+        <div class="card-block text-center">
+            <small class="card-text">{{ tnow.barangay_justice5 }}</small>
+        </div>
+    </div>
+        </div>
+        <div class="col-sm-3">
+        <div class="card align-items-center" style="border-radius: 13px;width: 180px;">
+        <div class="card-block text-center">
+            <small class="card-text">{{ tnow.barangay_justice6 }}</small>
+        </div>
+    </div>
+        </div>
+        <div class="col-sm-3">
+        <div class="card align-items-center" style="border-radius: 13px;width: 180px;">
+        <div class="card-block text-center">
+            <small class="card-text">{{ tnow.barangay_justice7 }}</small>
+        </div>
+    </div>
+        </div>
+        <div class="col-sm-3">
+        <div class="card align-items-center" style="border-radius: 13px;width: 180px;">
+        <div class="card-block text-center">
+            <small class="card-text">{{ tnow.barangay_justice8 }}</small>
+        </div>
+    </div>
+        </div>
+        <div class="col-sm-3">
+        <div class="card align-items-center" style="border-radius: 13px;width: 180px;">
+        <div class="card-block text-center">
+            <small class="card-text">{{ tnow.barangay_justice9 }}</small>
+        </div>
+    </div>
+        </div>
+        <div class="col-sm-3">
+        <div class="card align-items-center" style="border-radius: 13px;width: 180px;">
+        <div class="card-block text-center">
+            <small class="card-text">{{ tnow.barangay_justice10 }}</small>
+        </div>
+    </div>
+        </div>
+    </div>
+    <hr>
+        <p style="text-align:center"><b>Barangay Helper and Driver</b></p>
+    <div class="row">
+        <div class="col-sm-3">
+    <div class="card align-items-center" style="border-radius: 13px;width: 180px;">
+        <div class="card-block text-center">
+            <small class="card-text">{{ tnow.barangay_helper_and_driver1 }}</small>
+        </div>
+    </div>
+        </div>
+        <div class="col-sm-3">
+        <div class="card align-items-center" style="border-radius: 13px;width: 180px;">
+        <div class="card-block text-center">
+            <small class="card-text">{{ tnow.barangay_helper_and_driver2 }}</small>
+        </div>
+    </div>
+        </div>
+        <div class="col-sm-3">
+        <div class="card align-items-center" style="border-radius: 13px;width: 180px;">
+        <div class="card-block text-center">
+            <small class="card-text">{{ tnow.barangay_helper_and_driver3 }}</small>
+        </div>
+    </div>
+        </div>
+        <div class="col-sm-3">
+        <div class="card align-items-center" style="border-radius: 13px;width: 180px;">
+        <div class="card-block text-center">
+            <small class="card-text">{{ tnow.barangay_helper_and_driver4 }}</small>
+        </div>
+    </div>
+        </div>
+        <div class="col-sm-3">
+        <div class="card align-items-center" style="border-radius: 13px;width: 180px;">
+        <div class="card-block text-center">
+            <small class="card-text">{{ tnow.barangay_helper_and_driver5 }}</small>
+        </div>
+    </div>
+        </div>
+        <div class="col-sm-3">
+        <div class="card align-items-center" style="border-radius: 13px;width: 180px;">
+        <div class="card-block text-center">
+            <small class="card-text">{{ tnow.barangay_helper_and_driver6 }}</small>
+        </div>
+    </div>
+        </div>
+        <div class="col-sm-3">
+        <div class="card align-items-center" style="border-radius: 13px;width: 180px;">
+        <div class="card-block text-center">
+            <small class="card-text">{{ tnow.barangay_helper_and_driver7 }}</small>
+        </div>
+    </div>
+        </div>
+    </div><br><br>
+<a type="button" href="{% url 'tn-detail' tnow.id %}" class="btn btn-outline-info btn-lg btn-sm">
+                              More<span class="las la-arrow-right">
+                            </span></a><br>
+    {% endfor %}
+
+
+<!--    &lt;!&ndash;Tabla&ndash;&gt;-->
+<!--            <div class="recent-grid">-->
+<!--                <div class="projects">-->
+<!--                    <div class="card">-->
+<!--                        <div class="card-header">-->
+<!--                            <h3>List of Terms</h3>-->
+<!--                        <div class="search-wrapper">-->
+<!--                            <span class="bi bi-search"></span>-->
+<!--                            <input type="number" id="myInput" onkeyup="myFunction()"  placeholder="Search Last name" />-->
+<!--                        </div>-->
+<!--&lt;!&ndash;                            <a type="button" href="{% url 'bp-create' %}" class="btn btn-info btn-lg btn-sm">&ndash;&gt;-->
+<!--&lt;!&ndash;                              Add Blotter<span class="las la-arrow-right">&ndash;&gt;-->
+<!--&lt;!&ndash;                            </span></a>&ndash;&gt;-->
+<!--                        </div>-->
+
+<!--                        <div class="card-body">-->
+<!--                            <div class="table-responsive" style="height: 300px;">-->
+<!--                                <table id="myTable" width="100%">-->
+
+<!--                                    <thead>-->
+<!--                                        <tr>-->
+<!--                                            <td>Term Year</td>-->
+<!--                                            <td>Barangay Chairman</td>-->
+<!--                                        </tr>-->
+<!--                                    </thead>-->
+<!--                                    <tbody>-->
+<!--                                    {% for tnow in tnow %}-->
+<!--                                        <tr>-->
+<!--                                            <td><a href="{% url 'tn-detail' tnow.id %}">{{ tnow.term_year }}</a></td>-->
+<!--                                            <td>{{ tnow.Barangay_chairman }}</td>-->
+<!--                                        </tr>-->
+<!--                                    {% endfor %}-->
+<!--                                    </tbody>-->
+
+<!--                                </table>-->
+<!--                            </div>-->
+<!--                        </div>-->
+
+<!--                    </div>-->
+<!--                </div>-->
+<!--<script>-->
+<!--function myFunction() {-->
+<!--  var input, filter, table, tr, td, i, txtValue;-->
+<!--  input = document.getElementById("myInput");-->
+<!--  filter = input.value.toUpperCase();-->
+<!--  table = document.getElementById("myTable");-->
+<!--  tr = table.getElementsByTagName("tr");-->
+<!--  for (i = 0; i < tr.length; i++) {-->
+<!--    td = tr[i].getElementsByTagName("td")[0];-->
+<!--    if (td) {-->
+<!--      txtValue = td.textContent || td.innerText;-->
+<!--      if (txtValue.toUpperCase().indexOf(filter) > -1) {-->
+<!--        tr[i].style.display = "";-->
+<!--      } else {-->
+<!--        tr[i].style.display = "none";-->
+<!--      }-->
+<!--    }-->
+<!--  }-->
+<!--}-->
+<!--</script>-->
+<!--            </div>-->
+</div>
+
+{% endblock content %}

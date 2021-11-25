@@ -1,0 +1,22 @@
+{% extends "dash/base2.html" %}
+{% load crispy_forms_tags %}
+{% block content %}
+<div style="margin-left:54px; margin-right:255px; margin-top:114px;">
+<div class="card" style="border-radius: 25px;">
+     <div class="card-body">
+        <form method="post" novalidate>
+            {% csrf_token %}
+                {{ form.content|as_crispy_field }}
+            <button type="submit" class="btn btn-success btn-sm">Save Post</button>
+            <button class="btn btn-outline-dark btn-sm" onclick="goBack()">Cancel</button>
+        </form>
+    </div>
+</div>
+</div>
+</div>
+<script>
+function goBack() {
+  window.history.back();
+}
+</script>
+{% endblock content %}

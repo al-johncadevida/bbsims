@@ -1,0 +1,133 @@
+{% extends "blog/base.html" %}
+<!DOCTYPE html>
+<html lang="en">
+
+{% block content %}
+<body>
+
+
+<!-- content starts -->
+<div class="content">
+    <div class="content_left"><br>
+        <h6 style="margin-left:8px;">Announcements</h6><hr>
+
+        {% for announcement in announcement %}
+        <div class="card gedf-card" style="display:flex;border-radius:25px; margin-top:10px;margin-left:10px;border-style: none;background-color: #f1f5f9;">
+            <div class="card-header" style="border-radius:25px 0px 0px 0px;height:60px">
+                <div class="d-flex justify-content-between ">
+                    <div class="d-flex justify-content-between ">
+                        <div class="mr-2">
+                            <img class="rounded-circle" width="35" src="{{ announcement.author.profile.image.url }}" alt="">
+                        </div>
+                        <div class="ml-2">
+                            <div class="h6 m-0">{{ announcement.author }}</div>
+                            <small><div class="h7 text-muted">{{ announcement.author.email }}</div></small>
+                        </div>
+                    </div>
+                    <div>
+
+                    </div>
+                </div>
+
+            </div>
+            <div class="card-body">
+                <div class="text-muted h7 mb-2" style="font-size: 12px;"> <i class="far fa-clock"></i> {{ announcement.date_posted|date:"F d, Y" }}</div>
+                <h6 class="card-title">{{ announcement.content }}</h6>
+            </div>
+            <!--                    <div class="card-footer">-->
+            <!--                        <a href="#" class="card-link"><i class="fa fa-gittip"></i> Like</a>-->
+            <!--                        <a href="#" class="card-link"><i class="fa fa-comment"></i> Comment</a>-->
+            <!--                        <a href="#" class="card-link"><i class="fa fa-mail-forward"></i> Share</a>-->
+            <!--                    </div>-->
+        </div>
+        {% endfor %}
+
+    </div>
+
+    <div class="content_center">
+
+        {% for resident_posts in resident_posts %}
+        <div class="card gedf-card" style="display:flex;margin-top:10px;border-style: none;margin-left:40px;margin-right:30px;border-radius: 25px;;">
+            <div class="card-header" style="background: #fff;border-radius: 25px 25px 0px 0px;text-align: left;">
+                <div class="d-flex justify-content-between align-items-center">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <div class="mr-2">
+                            <img class="rounded-circle" width="45" src="{{ resident_posts.author.profile.image.url }}" alt="">
+                        </div>
+                        <div class="ml-2">
+                            <div class="h5 m-0">{{ resident_posts.author }}</div>
+                            <div class="h7 text-muted">{{ resident_posts.author.email }}</div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+            <div class="card-body" style="text-align: left;">
+                <small><div class="text-muted h7 mb-2"> <i class="fa fa-clock-o"></i>{{ resident_posts.date_posted|date:"F d, Y" }}</div></small>
+                <h5 class="card-title">{{ resident_posts.title }}</h5>
+                <p class="card-text">
+                    {{ resident_posts.content }}
+                </p>
+            </div>
+            <div class="card-footer" style="background: #fff;border-radius: 0px 0px 25px 25px ;">
+                <!--                        <a href="#" class="card-link"><i class="fa fa-gittip"></i> Like</a>-->
+                <!--                        <a href="#" class="card-link"><i class="fa fa-comment"></i> Comment</a>-->
+                <!--                        <a href="#" class="card-link"><i class="fa fa-mail-forward"></i> Share</a>-->
+                <a style="float: right;" class="card-link" href="{% url 'post-detail' resident_posts.id %}">More</a>
+            </div>
+        </div>
+        {% endfor %}
+        <!-- news feed -->
+
+
+    </div>
+
+    <div class="content_right">
+        <div class="content_right_inner">
+            <ul>
+                <li>
+                    <div class="customers" style="margin-top:10px; display:flex;">
+                        <div class="card" style="width:300px; border-radius:25px;"><br>
+                            <h5 style="text-align: center;"><b>Create Post</b></h5>
+                            <hr>
+                            <div class="card-body">
+                                <form name = "form" action = "{% url 'post-create'  %}"
+                                      method = "POST" >{% csrf_token %}
+
+                                    <div class="form-group">
+                                              <textarea type="text"  style="width:100%;border-radius: 10px;border: 0px; height:30px"
+                                                        placeholder = "Post title" name = "title" ></textarea>
+                                        <textarea  style="width:100%;border-radius: 10px;border: 0px; height:100px"
+                                                   placeholder = "content" name = "content" ></textarea>
+
+                                    </div>
+
+                                    <button  class="btn btn-outline-success btn-lg btn-block btn-sm" type="submit" style="border-radius:25px;" >Post</button>
+
+                                </form>
+                            </div>
+                        </div>
+                        <br></div>
+                </li>
+                <li>
+                    <div class="card" style="border-style:none;border-radius: 25px;width:300px;background-color: #f1f5f9;"><br>
+                        <img class="rounded-circle article-img" src="{{ user.profile.image.url }}" alt="Card image" style="width:100px;height:100px; margin: auto;">
+                        <div class="card-body" style="background-color: #f1f5f9;">
+                            <h4 class="card-title" style="text-align: center;">{{ user.last_name }}, {{ user.first_name }}</h4><hr>
+                            <p class="card-text" style="text-align: center;">Profile</p>
+                            <a class="nav-item nav-link" href="{% url 'profile' %}" style="color:black">Show Profile</a>
+                            <a class="nav-item nav-link" href="{% url 'u_profile' %}" style="color:black">Update-Profile</a>
+                            <a class="nav-item nav-link" href="{% url 'logout' %}" style="color:black">Logout</a>
+                        </div>
+                    </div>
+                    <br>
+                </li>
+
+            </ul>
+        </div>
+    </div>
+</div>
+</body>
+{% endblock content %}
+</html>
